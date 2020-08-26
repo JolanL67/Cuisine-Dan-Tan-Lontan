@@ -20,7 +20,7 @@ Technology used
 Team
 --------------------
 
-4 developper ( 2 react, 2 symfony)
+4 developpers ( 2 react, 2 symfony)
 
 Symfony
 - [Jolan](https://github.com/JolanL67)
