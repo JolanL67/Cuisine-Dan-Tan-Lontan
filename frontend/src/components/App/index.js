@@ -5,6 +5,7 @@ import React from 'react';
 import Header from '../Header';
 import Presentation from '../Presentation';
 import Footer from '../Footer';
+import Form from '../Form'
 
 import './app.scss';
 
@@ -13,9 +14,9 @@ const App = () => (
   <div className="cdtl_app">
     <Header />
     <Presentation />
+    <Form />
     <Footer />
   </div>
-);
-
+)
 // == Export
 export default App;
