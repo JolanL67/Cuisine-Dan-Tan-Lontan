@@ -46,6 +46,10 @@
     "webpack-merge": "*"
   },
   "dependencies": {
+    "@date-io/date-fns": "1.x",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/pickers": "^3.2.10",
+    "date-fns": "^2.16.0",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*"

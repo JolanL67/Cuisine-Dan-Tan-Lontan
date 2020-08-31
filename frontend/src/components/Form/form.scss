@@ -1,0 +1,73 @@
+@import 'src/styles/vars';
+
+.contact {
+
+  width: 100%;
+    margin: 1em auto;
+
+  @include phone {
+
+    .contact_title {
+      text-align: center;
+      margin-bottom: 1em;
+
+    }
+    .contact_info {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .contact_form {
+      margin: auto;
+    }
+    .contact_form_name_items {
+      display: flex;
+      justify-content: space-around;
+
+    }
+    .contact_form_adress_items {
+
+      margin: 1rem auto;
+      text-align: center;
+      .contact_form_adress_items_adress {
+        width: 94%;
+      }
+
+    }
+    .contact_form_contact_items {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .contact_description {
+      text-align: center;
+      margin-top: 1rem;
+      .contact_description_text{
+        width: 94%;
+      }
+    }
+    .contact_button {
+      display: block;
+      margin: 1rem auto;
+    }
+    .contact_hour {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    
+ }
+ @include sm {
+   
+  }
+  @include md {
+
+}
+@include xl {
+
+
+
+}
+
+}
