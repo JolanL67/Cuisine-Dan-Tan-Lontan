@@ -1,0 +1,20 @@
+@import 'src/styles/vars';
+
+.cdtl_homepage_title{
+    margin-top: 5em;
+    z-index: 1;
+    width: 80%;
+    margin: 4em auto 2em auto;
+}
+
+@include phone {
+
+}
+
+@include md{
+
+}
+
+@include xl{
+
+}

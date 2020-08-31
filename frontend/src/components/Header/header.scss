@@ -1,0 +1,19 @@
+@import 'src/styles/vars';
+
+
+.cdtl_header{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2em;
+}
+@include phone {
+
+}
+
+@include md{
+
+}
+
+@include xl{
+    
+}

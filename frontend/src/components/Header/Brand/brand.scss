@@ -1,0 +1,59 @@
+@import 'src/styles/vars';
+
+.navbar-brand{
+    display: contents!important;
+}
+.cdtl-logo{
+    width: 20%;
+}
+.cdtl_brand_navbar{
+    color: white;
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;  
+    font-size: 1.8em;  
+}
+    
+@include phone {
+    .navbar-brand{
+        display: contents!important;
+    }
+    .cdtl-logo{
+        width: 20%;
+    }
+    .cdtl_brand_navbar{
+        color: white;
+        font-weight: bold;
+        font-family: 'Lobster Two', cursive;  
+        font-size: 1.8em;  
+    }
+}
+
+@include md{
+    .navbar-brand{
+        display: contents!important;
+    }
+    .cdtl-logo{
+        width: 12%;
+    }
+    .cdtl_brand_navbar{
+        color: white;
+        font-weight: bold;
+        font-family: 'Lobster Two', cursive;   
+        font-size: 2em;   
+    }
+}
+
+@include xl{
+    .navbar-brand{
+        display: contents!important;
+    }
+    .cdtl_brand_navbar{
+        color: white;
+        font-weight: bold;
+        font-family: 'Lobster Two', cursive; 
+        font-size: 2.2em;     
+    }
+    .cdtl-logo{
+        width: 8%;
+    }
+}

@@ -1,0 +1,18 @@
+@import 'src/styles/vars';
+
+
+@include phone {
+	.cdtl_app{
+		width:100%;
+	}
+}
+
+@include md{
+
+}
+
+@include xl{
+    
+}
+
+

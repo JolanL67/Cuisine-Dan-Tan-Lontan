@@ -1,0 +1,95 @@
+@import 'src/styles/vars';
+
+
+@include phone {
+    .cdtl_presentation{
+        border-top: black solid 2px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em;
+        background-color: blanchedalmond;
+    }
+    
+    .cdtl_presentation_title{
+        font-size: 2em;
+        font-family: 'Lobster Two', cursive;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cdtl_presentation_image{
+        width: 40%;
+        float: left;
+        margin: 0.6em;
+    }
+    
+    
+    .cdtl_presentation_description{
+        width: 100%;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 0.7em;
+    }
+}
+
+@include md{
+    .cdtl_presentation{
+        border-top: black solid 2px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em;
+        background-color: blanchedalmond;
+    }
+    
+    .cdtl_presentation_title{
+        font-size: 2em;
+        font-family: 'Lobster Two', cursive;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cdtl_presentation_image{
+        width: 40%;
+        float: left;
+        margin: 0.6em;
+    }
+    
+    
+    .cdtl_presentation_description{
+        width: 100%;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 0.7em;
+    }
+}
+
+@include xl{
+    .cdtl_presentation{
+        border-top: black solid 2px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em;
+        background-color: blanchedalmond;
+    }
+    
+    .cdtl_presentation_title{
+        font-size: 4em;
+        font-family: 'Lobster Two', cursive;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cdtl_presentation_image{
+        width: 25%;
+        float: left;
+        margin: 0.6em;
+    }
+    
+    
+    .cdtl_presentation_description{
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,98 @@
+@import 'src/styles/vars';
+@import "~bootstrap/scss/bootstrap";
+
+
+.navbar{
+    background-color: #54453f!important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.navbar-nav{
+    text-align: center;
+    width: 100%;
+}
+.navbar-toggler{
+    border: 0.1em solid white!important;
+    background-color: lightcyan;
+}
+.cdtl_navLink{
+    color: white!important;
+    font-family: 'Lobster Two', cursive; 
+    font-size: 1.6em;
+    border-bottom: 0.15em solid rgba(255, 255, 255, 0.726);
+    width: 80%;
+    margin: 0 auto;
+}
+
+@include phone {
+    .navbar{
+        background-color: #54453f!important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .navbar-nav{
+        text-align: center;
+        width: 100%;
+    }
+    .navbar-toggler{
+        border: 0.1em solid white!important;
+        background-color: lightcyan;
+    }
+    .cdtl_navLink{
+        color: white!important;
+        font-family: 'Lobster Two', cursive; 
+        font-size: 1.6em;
+        border-bottom: 0.15em solid rgba(255, 255, 255, 0.726);
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@include md{
+    .navbar{
+        background-color: #54453f!important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .navbar-nav{
+        text-align: center;
+        width: 100%;
+    }
+    .navbar-toggler{
+        border: 0.1em solid white!important;
+        background-color: lightcyan;
+    }
+    .cdtl_navLink{
+        color: white!important;
+        font-family: 'Lobster Two', cursive; 
+        font-size: 1.6em;
+        border-bottom: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+@include xl{
+    .navbar{
+        background-color: #54453f!important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+  
+    .cdtl_navLink{
+        color: white!important;
+        font-family: 'Lobster Two', cursive; 
+        font-size: 1.6em;
+        border-bottom: none;
+        width: 100%;
+        margin: 0 0 0 2em;
+    }
+}
+
