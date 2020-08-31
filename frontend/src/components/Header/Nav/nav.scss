@@ -3,7 +3,7 @@
 
 
 .navbar{
-    background-color: #54453f!important;
+    background-color: black!important;
     position: fixed;
     top: 0;
     width: 100%;
@@ -28,7 +28,7 @@
 
 @include phone {
     .navbar{
-        background-color: #54453f!important;
+        background-color: black!important;
         position: fixed;
         top: 0;
         width: 100%;
@@ -54,7 +54,7 @@
 
 @include md{
     .navbar{
-        background-color: #54453f!important;
+        background-color: black!important;
         position: fixed;
         top: 0;
         width: 100%;
@@ -80,7 +80,7 @@
 
 @include xl{
     .navbar{
-        background-color: #54453f!important;
+        background-color: black!important;
         position: fixed;
         top: 0;
         width: 100%;

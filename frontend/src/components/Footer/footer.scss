@@ -1,0 +1,68 @@
+@import 'src/styles/vars';
+
+
+.cdtl_footer{
+    background-color: black;
+}
+
+.cdtl_footer_title{
+    color: white;
+    font-family: 'Lobster Two', cursive; 
+    text-align: center;
+    margin-top: 1.5em;
+    padding: 0.5em 0.5em 1em 0.5em;
+}
+
+.cdtl_footer_social{
+
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.MuiSvgIcon-root{
+color: rgba(85, 85, 255, 0.76);
+transform: scale(1.9);
+border: rgb(183, 182, 255) solid 3px;
+border-radius: 50%;
+margin: 0 0.8em;
+padding: 0.1em;
+}
+
+.MuiSvgIcon-root:hover{
+    border: rgba(85, 85, 255, 0.76) solid 4px;
+    color: rgb(183, 182, 255);
+}
+
+
+.cdtl_footer_copyright{
+    text-align: center;
+}
+
+.cdtl_footer_contact{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5em;
+}
+@include phone {
+
+}
+
+@include md{
+
+}
+
+@include xl{
+    .cdtl_footer_contact{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: none;
+        justify-content: space-around;
+        padding-bottom: 5em;
+    }
+}
