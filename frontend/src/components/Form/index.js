@@ -30,20 +30,9 @@ const Form = () => (
       <div className="contact_hour">
       <>
       <DateTimePicker
-        variant="inline"
-        label="Basic example"
+        label="Choississez le jour et l'heure de votre commande"
+        inputVariant="outlined"
         value={Date.now}
-       
-      />
-
-      <KeyboardDateTimePicker
-        variant="inline"
-        ampm={false}
-        label="With keyboard"
-        value={Date.now}
-        onError={console.log}
-        disablePast
-        format="yyyy/MM/dd HH:mm"
       />
     </>
       </div>

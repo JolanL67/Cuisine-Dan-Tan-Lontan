@@ -2,14 +2,15 @@
 
 .contact {
 
-  width: 100%;
     margin: 1em auto;
 
   @include phone {
-
+    display: flex;
+    flex-direction: column;
     .contact_title {
       text-align: center;
       margin-bottom: 1em;
+      font-family: Lobster Two,cursive;
 
     }
     .contact_info {
@@ -22,8 +23,23 @@
       margin: auto;
     }
     .contact_form_name_items {
+      width: 94%;
+      margin: auto;
       display: flex;
+      flex-direction: column;
       justify-content: space-around;
+
+      .contact_form_name_items_lastname {
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        border: 2px grey solid;
+        padding-left: 1.2rem;
+      }
+      .contact_form_name_items_firstname {
+        border-radius: 10px;
+        border: 2px grey solid;
+        padding-left: 1.2rem;
+      }
 
     }
     .contact_form_adress_items {
@@ -32,12 +48,32 @@
       text-align: center;
       .contact_form_adress_items_adress {
         width: 94%;
+        border-radius: 10px;
+        border: 2px grey solid;
+        padding-left: 1.2rem;
       }
 
     }
     .contact_form_contact_items {
       display: flex;
+      flex-direction: column;
       justify-content: space-around;
+      width: 94%;
+      margin: auto;
+
+      .contact_form_contact_phone {
+        border-radius: 10px;
+        border: 2px grey solid;
+        padding-left: 1.2rem;
+        margin-bottom: 1rem;
+
+      }
+
+      .contact_form_contact_email {
+        border-radius: 10px;
+        border: 2px grey solid;
+        padding-left: 1.2rem;
+      }
     }
 
     .contact_description {
@@ -45,6 +81,9 @@
       margin-top: 1rem;
       .contact_description_text{
         width: 94%;
+        border-radius: 10px;
+        border: 2px grey solid;
+        padding-left: 1.2rem;
       }
     }
     .contact_button {
@@ -66,6 +105,94 @@
 }
 @include xl {
 
+  display: flex;
+  flex-direction: column;
+  .contact_title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: Lobster Two,cursive;
+    font-size: 4em;
+
+  }
+  .contact_info {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .contact_form {
+    margin: auto;
+    width: 40%;
+  }
+  .contact_form_name_items {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+    .contact_form_name_items_lastname {
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 2px grey solid;
+      padding-left: 1.2rem;
+    }
+    .contact_form_name_items_firstname {
+      border-radius: 10px;
+      border: 2px grey solid;
+      padding-left: 1.2rem;
+    }
+
+  }
+  .contact_form_adress_items {
+
+    margin: 1rem auto;
+    text-align: center;
+    .contact_form_adress_items_adress {
+      border-radius: 10px;
+      border: 2px grey solid;
+      padding-left: 1.2rem;
+    }
+
+  }
+  .contact_form_contact_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+
+    .contact_form_contact_phone {
+      border-radius: 10px;
+      border: 2px grey solid;
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+
+    }
+
+    .contact_form_contact_email {
+      border-radius: 10px;
+      border: 2px grey solid;
+      padding-left: 1.2rem;
+    }
+  }
+
+  .contact_description {
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 10px;
+    .contact_description_text{
+      border-radius: 10px;
+      border: 2px grey solid;
+      padding-left: 1.2rem;
+    }
+  }
+  .contact_button {
+    display: block;
+    margin: 1rem auto;
+  }
+  .contact_hour {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
 
 
 }
