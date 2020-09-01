@@ -5,7 +5,7 @@ import React from 'react';
 import Header from '../Header';
 import Presentation from '../Presentation';
 import Footer from '../Footer';
-import Form from '../Form'
+import Form from '../Form';
 
 import './app.scss';
 
@@ -17,6 +17,6 @@ const App = () => (
     <Form />
     <Footer />
   </div>
-)
+);
 // == Export
 export default App;
