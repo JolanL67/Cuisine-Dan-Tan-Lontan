@@ -1,0 +1,22 @@
+@import 'src/styles/vars';
+
+
+.cdtl_menu{
+    margin: 1em 0;
+}
+.cdtl_menu_title{
+    font-family: 'Lobster Two', cursive; 
+    text-align: center;
+}
+
+@include phone {
+
+}
+
+@include md{
+
+}
+
+@include xl{
+    
+}
