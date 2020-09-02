@@ -10,13 +10,18 @@ const Footer = () => (
       <h1 className="cdtl_footer_title">Contact</h1>
       <div className="cdtl_footer_contact">
         <div className="cdtl_footer_adress">
-          <h3>je suis l'adresse</h3>
+          <p>Adresse :</p>
+          <p>13011 Marseille</p>
         </div>
         <div className="cdtl_footer_map">
-          <h3>je suis la map</h3>
+          <div> </div>
         </div>
         <div className="cdtl_footer_info">
-          <h3>je suis les coordonnées</h3>
+          <p>Coordonnées</p>
+          <p>Tel : 06.01.02.03.04</p>
+          <p>@mail : cdtl@gmail.com</p>
+          <p>Facebook : cdtl974</p>
+          <p>Twitter : Cdtl-974</p>
         </div>
       </div>
     </div>
@@ -25,7 +30,7 @@ const Footer = () => (
       <FacebookIcon fontSize="large" />
     </div>
     <div className="cdtl_footer_copyright">
-      <h6>-Copyright @xxxx-</h6>
+      <h6>-Copyright un lien vers nos github peut etre-</h6>
     </div>
   </>
 );
