@@ -3,15 +3,20 @@
 
 
 .navbar{
-    background-color: #858585!important;
+    background: linear-gradient(180deg, rgb(97 97 97) 0%, rgb(140 140 140) 52%, rgb(185 184 184) 100%);
+    border-left: outset gainsboro 3px;
+    border-right: outset gainsboro 3px;
+    border-bottom: outset gainsboro 3px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
+    
 }
 .navbar-nav{
     text-align: center;
     width: 100%;
+    margin: 0.3em;
 }
 .navbar-toggler{
     border: 0.1em solid white!important;
@@ -22,19 +27,22 @@
     font-family: 'Lobster Two', cursive; 
     font-size: 1.6em;
     border-bottom: 0.15em solid rgba(255, 255, 255, 0.726);
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
 .cdtl_navLink:hover{
-    background-color:  #999999e5;
-    border-radius: 2em;
-    border: white solid 1px;
+    border-bottom: solid white 2px;
+    border-top: solid white 2px;
 }
 
 @include phone {
     .navbar{
-        background-color: #858585!important;
+        background: linear-gradient(180deg, rgb(97 97 97) 0%, rgb(140 140 140) 52%, rgb(185 184 184 / 80%) 100%);
+        border-left: outset gainsboro 1.5px;
+        border-right: outset gainsboro 1.5px;
+        border-bottom: outset gainsboro 1.5px;
+        background-color: #85858500!important;
         position: fixed;
         top: 0;
         width: 100%;
@@ -51,7 +59,7 @@
     .cdtl_navLink{
         font-family: Lobster Two,cursive;
         color: ghostwhite;
-        text-shadow: 4px 1px 9px black;   
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363;
         font-size: 1.6em;
         border-bottom: 0.15em solid rgba(255, 255, 255, 0.726);
         width: 80%;
@@ -61,6 +69,10 @@
 
 @include md{
     .navbar{
+        background: linear-gradient(180deg, rgb(97 97 97) 0%, rgb(140 140 140) 52%, rgb(185 184 184) 100%);
+        border-left: outset gainsboro 2px;
+        border-right: outset gainsboro 2px;
+        border-bottom: outset gainsboro 2px;
         background-color: #858585!important;
         position: fixed;
         top: 0;
@@ -77,7 +89,7 @@
     .cdtl_navLink{
         font-family: Lobster Two,cursive;
         color: ghostwhite;
-        text-shadow: 4px 1px 9px black;   
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363;
         font-size: 1.6em;
         border-bottom: none;
         width: 80%;
@@ -88,6 +100,10 @@
 
 @include xl{
     .navbar{
+        background: linear-gradient(180deg, rgb(97 97 97) 0%, rgb(140 140 140) 52%, rgb(185 184 184) 100%);
+        border-left: outset gainsboro 2.5px;
+        border-right: outset gainsboro 2.5px;
+        border-bottom: outset gainsboro 2.5px;
         background-color: #858585!important;
         position: fixed;
         top: 0;
@@ -97,10 +113,9 @@
     .cdtl_navLink{
         font-family: Lobster Two,cursive;
         color: ghostwhite;
-        text-shadow: 4px 1px 9px black;   
-        font-size: 1.6em;
-        border-bottom: none;
-        width: 100%;
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363; 
+        font-size: 1.9em;
+        width: 80%;
         margin: 0 0 0 2em;
     }
 }

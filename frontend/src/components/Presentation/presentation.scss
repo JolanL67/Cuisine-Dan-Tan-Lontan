@@ -15,14 +15,14 @@ max-width: fit-content;
         width: 90%;
         margin: 0 auto;
         padding: 1em;
-        background-color:white;
+        background-color: #fff2f2;
     }
     
     .cdtl_presentation_title{
         font-size: 2em;
         font-family: 'Lobster Two', cursive;
         width: 100%;
-        text-align: center;
+        text-align:center;
     }
 
     .cdtl_presentation_image{
@@ -48,7 +48,7 @@ max-width: fit-content;
         width: 90%;
         margin: 0 auto;
         padding: 1em;
-        background-color:white;
+        background-color: #fff2f2;
     }
     
     .cdtl_presentation_title{
@@ -79,33 +79,38 @@ max-width: fit-content;
     .cdtl_presentation{
         border: black solid 2px;
         width: 90%;
-        margin: 0 auto;
-        padding: 1em;
-        background-color:white;
+        margin: 1em auto;
+        padding: 2em;
+        background-color: #fff2f2;
+        border-radius: 1em;
+        
     }
     
     .cdtl_presentation_title{
         font-size: 4em;
+        padding-bottom: 1em;
         font-family: Lobster Two,cursive;
         width: 100%;
-        text-align: center;
+        text-align: left;
         color: ghostwhite;
         text-shadow: 4px 1px 9px black;
+        
     }
 
     .cdtl_presentation_image{
-        width: 25%;
-        float: left;
-        margin: 0.6em;
+        width: 20%;
+        float: right;
+        margin-left: 1em;
         display: flex;
         align-self: center;
     }
     
     
     .cdtl_presentation_description{
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         text-align: justify;
-        font-size: 1.2em;
+        font-size: 1.5em;
+        font-family: 'Cormorant', serif;
     }
 }

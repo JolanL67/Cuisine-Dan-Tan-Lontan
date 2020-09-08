@@ -2,16 +2,12 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-import Brand from 'src/components/Header/Brand';
 
 import './nav.scss';
 
 const Navigation = () => {
   return (
     <Navbar expand="lg">
-      <Navbar.Brand href="#home">
-        <Brand />
-      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto cdtlNav">

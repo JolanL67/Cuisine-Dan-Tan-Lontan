@@ -1,13 +1,21 @@
 import React from 'react';
 
 import './title.scss';
-import Img from '../../../assets/image/titlebw.png';
+
 
 const Title = () => (
   <>
-    <div className="cdtl_homepage_title">
-      <img className="cdtl_homepage_title_picture" alt="titre" src={Img} />
+   <div className="cdtl_homepage_title">
+    <div className="cdtl_homepage_text">
+      Bienvenue
     </div>
+    <div className="cdtl_homepage_text">
+      chez
+    </div>
+    <div className="cdtl_homepage_text">
+      Cuisine Dan Tan Lontan 974
+    </div>
+  </div>
   </>
 );
 
