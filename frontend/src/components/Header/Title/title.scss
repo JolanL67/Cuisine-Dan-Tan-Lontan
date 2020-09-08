@@ -26,11 +26,14 @@
 }
 @include phone {
   .cdtl_homepage_title {
+    background-image: url(https://c.wallhere.com/photos/f9/dc/ocean_sunset_mer_beach_reunion_island_soleil_indian-980940.jpg!d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     padding-top: 1em;
-    line-height: 15vh;
     text-align: center;
     font-family: niconne, cursive;
-    font-size: 5.5em;
+    font-size: 4em;
     font-weight: 700;
     color: #f5f5f5;
     text-shadow: 1px 1px 1px #919191,
@@ -86,6 +89,10 @@
         top: 200px;
     }
     .cdtl_homepage_title {
+        background-image: url(https://c.wallhere.com/photos/f9/dc/ocean_sunset_mer_beach_reunion_island_soleil_indian-980940.jpg!d);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
         padding-top: 1em;
         padding-bottom: 0.5em;
         line-height: 15vh;

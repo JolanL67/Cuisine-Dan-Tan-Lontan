@@ -100,11 +100,11 @@
 
 @include xl{
     .navbar{
-        background: linear-gradient(180deg, rgb(97 97 97) 0%, rgb(140 140 140) 52%, rgb(185 184 184) 100%);
-        border-left: outset gainsboro 2.5px;
-        border-right: outset gainsboro 2.5px;
-        border-bottom: outset gainsboro 2.5px;
-        background-color: #858585!important;
+        background: linear-gradient(180deg,#616161,#8c8c8c 52%,#f49e88d4);
+        border-left: 2.5px outset #dcdcdc;
+        border-right: 2.5px outset #dcdcdc;
+        border-bottom: 2.5px outset #dcdcdc;
+        background-color: #f4ab8966!important;
         position: fixed;
         top: 0;
         width: 100%;
