@@ -13,16 +13,16 @@ Enjoy your Meal
 Technology used
 --------------------
 
-- Backend: Symfony, Bootstrap
+- Backend: Laravel, Bootstrap
 - Frontend: React, Material-UI
 - DB: MySql
 
 Team
 --------------------
 
-4 developpers ( 2 react, 2 symfony)
+4 developpers ( 2 react, 2 laravel)
 
-Symfony
+Laravel
 - [Jolan](https://github.com/JolanL67)
 - [Karim](https://github.com/Kanyashiu)
 
