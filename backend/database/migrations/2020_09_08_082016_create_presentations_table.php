@@ -13,7 +13,7 @@ class CreatePresentationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('presentation', function (Blueprint $table) {
+        Schema::create('presentations', function (Blueprint $table) {
             $table->id();
             $table->string('description', 1000);
             $table->string('thumbnail', 255);

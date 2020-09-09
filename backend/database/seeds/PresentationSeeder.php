@@ -12,7 +12,7 @@ class PresentationSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('presentation')->insert([
+         DB::table('presentations')->insert([
             'description' => 'a remplir',
             'thumbnail' => 'a remplir',
             'logo' => 'a remplir',
