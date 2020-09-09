@@ -361,7 +361,7 @@ class MenuSeeder extends Seeder
             $typeName = $index;
 
             foreach ( $subArray as $name => $data ) {
-                DB::table('menu')->insert([
+                DB::table('menus')->insert([
                     'type' => $typeName,
                     'name' => $name,
                     'price' => $data['price'],

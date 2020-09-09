@@ -12,7 +12,7 @@ class ContactSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('contact')->insert([
+        DB::table('contacts')->insert([
             'phone' => '06.51.14.07.56',
             'mail' => 'test@test.fr',
             'facebook' => 'url facebook',
