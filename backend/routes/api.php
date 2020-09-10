@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('v1/contact', 'Api\V1\ContactController@index');
+// Route::apiResource('v1/presentation', 'Api\V1\PresentationController');
+// https://laracasts.com/discuss/channels/laravel/laravel-51-404-response-to-json?page=1
+// https://laravel.sillo.org/une-api-avec-laravel-6/
