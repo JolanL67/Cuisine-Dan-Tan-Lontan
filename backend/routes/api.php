@@ -26,3 +26,8 @@ Route::get('v1/presentation', 'Api\V1\PresentationController@index');
 // Route API pour le menu
 Route::get('v1/menu', 'Api\V1\MenuController@index');
 
+// Route API pour le contact
+Route::get('v1/contact', 'Api\V1\ContactController@index');
+
+// https://laracasts.com/discuss/channels/laravel/laravel-51-404-response-to-json?page=1
+// https://laravel.sillo.org/une-api-avec-laravel-6/
