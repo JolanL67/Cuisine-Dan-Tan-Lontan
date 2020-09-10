@@ -3,6 +3,8 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Response;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -50,6 +52,16 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        $path = explode('/', strtolower($request->path()));
+        $statusCode = $exception->getStatusCode();
+
+        if ( $path[0] == "api" && $statusCode == 405) {
+            return response()->json([
+                'status' => '405',
+                'message' => "La méthode utilisée pour la requête n'est pas supportée par la ressource ciblée.",
+             ], 405);
+        };
+
         return parent::render($request, $exception);
     }
 }

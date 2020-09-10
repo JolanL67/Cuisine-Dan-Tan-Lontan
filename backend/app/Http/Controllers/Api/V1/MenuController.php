@@ -3,20 +3,18 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
-use App\Presentation;
-use Illuminate\Http\Response;
+use App\Menu;
 use Illuminate\Http\Request;
 
-class PresentationController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Response $response)
+    public function index()
     {
-
-        return Presentation::all();
+        return Menu::all();
     }
 }

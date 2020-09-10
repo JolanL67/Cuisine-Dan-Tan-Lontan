@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('presentation', 'Api\V1\PresentationController@index');
+// Route::get('api/v1/presentation', 'Api\V1\PresentationController@index');
+
+
+// https://laravel.sillo.org/une-api-avec-laravel-6/
