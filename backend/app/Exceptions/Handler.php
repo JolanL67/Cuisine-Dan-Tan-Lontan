@@ -61,7 +61,7 @@ class Handler extends ExceptionHandler
                 'message' => "La méthode utilisée pour la requête n'est pas supportée par la ressource ciblée.",
              ], 405);
         }
-        
+
         if ( $path[0] == "api" && $statusCode == 404) {
             return response()->json([
                 'status' => '404',
