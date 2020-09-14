@@ -18,7 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('phone', 20);
             $table->string('mail', 100);
             $table->string('facebook', 255);
-            $table->string('twitter', 255);
+            $table->string('instagram', 255);
             $table->timestamps();
         });
     }

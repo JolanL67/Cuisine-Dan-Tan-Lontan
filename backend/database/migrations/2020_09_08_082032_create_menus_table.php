@@ -18,7 +18,7 @@ class CreateMenusTable extends Migration
             $table->string('type', 255);
             $table->string('name', 255);
             $table->float('price');
-            $table->string('ingredient', 255);
+            $table->string('ingredient', 255)->nullable();
             $table->boolean('is_discount');
             $table->integer('nb_unit');
             $table->float('discount_price');

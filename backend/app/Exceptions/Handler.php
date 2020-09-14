@@ -52,22 +52,22 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-        $path = explode('/', strtolower($request->path()));
-        $statusCode = $exception->getStatusCode();
+        // $path = explode('/', strtolower($request->path()));
+        // $statusCode = $exception->getStatusCode();
 
-        if ($path[0] == "api" && $statusCode == 405) {
-            return response()->json([
-                'status' => '405',
-                'message' => "La méthode utilisée pour la requête n'est pas supportée par la ressource ciblée.",
-             ], 405);
-        }
+        // if ($path[0] == "api" && $statusCode == 405) {
+        //     return response()->json([
+        //         'status' => '405',
+        //         'message' => "La méthode utilisée pour la requête n'est pas supportée par la ressource ciblée.",
+        //      ], 405);
+        // }
 
-        if ( $path[0] == "api" && $statusCode == 404) {
-            return response()->json([
-                'status' => '404',
-                'message' => "La ressource demandée n'existe pas.",
-             ], 404);
-        };
+        // if ( $path[0] == "api" && $statusCode == 404) {
+        //     return response()->json([
+        //         'status' => '404',
+        //         'message' => "La ressource demandée n'existe pas.",
+        //      ], 404);
+        // };
 
         return parent::render($request, $exception);
     }

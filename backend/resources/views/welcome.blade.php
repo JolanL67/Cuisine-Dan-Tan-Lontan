@@ -69,6 +69,7 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+                        <div>Salut {{ Auth::user()->name }}</div>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -78,7 +79,7 @@
                     @endauth
                 </div>
             @endif
-
+                {{-- {{dd(Auth::user())}} --}}
             <div class="content">
                 <div class="title m-b-md">
                     Laravel

@@ -15,9 +15,8 @@ class CreatePresentationsTable extends Migration
     {
         Schema::create('presentations', function (Blueprint $table) {
             $table->id();
-            $table->string('description', 1000);
+            $table->string('description', 2000);
             $table->string('thumbnail', 255);
-            $table->string('logo', 255);
             $table->string('bg_image', 255);
             $table->timestamps();
         });

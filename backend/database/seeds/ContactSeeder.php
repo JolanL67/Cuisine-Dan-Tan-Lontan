@@ -14,9 +14,9 @@ class ContactSeeder extends Seeder
     {
         DB::table('contacts')->insert([
             'phone' => '06.51.14.07.56',
-            'mail' => 'test@test.fr',
-            'facebook' => 'url facebook',
-            'twitter' => 'url twitter',
+            'mail' => 'cuisinelontan974@gmail.com',
+            'facebook' => 'https://www.facebook.com/Cuisine-dan-tan-lontan-974-109778123964453',
+            'instagram' => 'https://www.instagram.com/cuisinedantanlontan/?hl=fr',
             'created_at' => new \DateTime(),
         ]);
     }
