@@ -445,7 +445,7 @@ class MenuSeeder extends Seeder
                     'name' => $name,
                     'price' => $data['price'],
                     'ingredient' => $data['ingredient'],
-                    'photo' => $data['ingredient'],
+                    'photo' => $data['photo'],
                     'is_discount' => $data['is_discount'],
                     'nb_unit' => $data['nb_unit'],
                     'discount_price' => $data['discount_price'],
