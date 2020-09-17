@@ -1,5 +1,5 @@
 import React from 'react';
-import './cart.scss'
+import './cart.scss';
 
 const Cart = () => (
 
@@ -8,21 +8,27 @@ const Cart = () => (
       <div className="cart_content_cart">
         <p>Votre panier :</p>
       </div>
-      <div>
+      <div className="cart_content_cart_list">
         <ul>
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
-          <li>item 4</li>
+          <li className="cart_content_cart_list_item">Rougaille Saucisse x2</li>
+          <li className="cart_content_cart_list_item">Nems poulet x6</li>
+          <li className="cart_content_cart_list_item">Rougaille Saucisse x2</li>
+          <li className="cart_content_cart_list_item">Nems poulet x6</li>
+          <li className="cart_content_cart_list_item">Rougaille Saucisse x2</li>
+          <li className="cart_content_cart_list_item">Nems poulet x6</li>
+          <li className="cart_content_cart_list_item">Rougaille Saucisse x2</li>
+          <li className="cart_content_cart_list_item">Nems poulet x6</li>
+          <li className="cart_content_cart_list_item">Rougaille Saucisse x2</li>
+          <li className="cart_content_cart_list_item">Nems poulet x6</li>
+          <li className="cart_content_cart_list_item">Rougaille Saucisse x2</li>
+          <li className="cart_content_cart_list_item">Nems poulet x6</li>
         </ul>
       </div>
-      </div>
-      <div className="cart_price">
-        <p>Total TTC : XX€</p>
-      </div>
+    </div>
+    <div className="cart_price">
+      <p>Total TTC : <span>15€90</span></p>
+    </div>
   </div>
-  
-
 );
 
-export default Cart
+export default Cart;

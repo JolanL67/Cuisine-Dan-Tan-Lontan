@@ -1,17 +1,16 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 // import { DateTimePicker, KeyboardDateTimePicker } from "@material-ui/pickers";
 
 
-import './form.scss'
-import Cart from '../Cart';
-
+import './form.scss';
+import Cart from 'src/containers/Cart';
 
 
 const Form = () => (
 
   <div className="contact">
     <h2 className="contact_title">Votre commande</h2>
-    <p className="contact_info">Les élements suivi de * sont requis pour le bon déroulement de la commande </p>
+    <p className="contact_info">Les élements suivi du symbole (*) sont requis pour le bon déroulement de la commande</p>
     <form action="" className="contact_form">
       <div className="contact_form_name_items" >
         <input type="text" className="contact_form_name_items_lastname" placeholder="Nom*"/>
@@ -21,11 +20,11 @@ const Form = () => (
         <input type="text" className="contact_form_adress_items_adress" placeholder="Adresse*"/>
       </div>
       <div className="contact_form_contact_items">
-          <input type="number" className="contact_form_contact_phone" placeholder="Téléphone*"/>
-          <input type="email" className="contact_form_contact_email" placeholder="Email*"/>
+        <input type="number" className="contact_form_contact_phone" placeholder="Téléphone*"/>
+        <input type="email" className="contact_form_contact_email" placeholder="Email*"/>
       </div>
       <div className="contact_description">
-        <textarea className="contact_description_text" name="description" id="" cols="30" rows="10" placeholder="Description*"></textarea>
+        <textarea className="contact_description_text" name="description" id="" cols="30" rows="10" placeholder="Description*" />
       </div>
 {/*       <div className="contact_hour">
         <>
@@ -38,7 +37,7 @@ const Form = () => (
       </div> */}
     </form>
     <Cart />
-      <button className="contact_button"  type="submit">Commander</button>
+    <button className="contact_button" type="submit">Commander</button>
   </div>
 
 );

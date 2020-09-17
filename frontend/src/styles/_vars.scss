@@ -12,6 +12,43 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
+$fontFamilyMainTitle: niconne, cursive;
+$fontFamilySecondTitle: 'Cormorant', serif;
+$fontFamilyText:  Lobster Two, cursive;
+
+$fontWeightTitle : 500;
+
+$spaceAroundTitle : 0.6em;
+
+$fontSizeTitleXl: 6em;
+$fontSizeTitleMd: 4em;
+$fontSizeTitlePhone: 3em;
+
+$fontSizeTextXl: 1.5em;
+$fontSizeTextMd: 1.5em;
+$fontSizeTextPhone: 1.5em;
+
+$textShadowTitle: 
+1px 1px 1px rgba(0, 0, 0, 0.5), 
+1px 2px 1px rgba(0, 0, 0, 0.5), 
+1px 3px 1px rgba(0, 0, 0, 0.5), 
+1px 4px 1px rgba(0, 0, 0, 0.5), 
+1px 5px 1px rgba(0, 0, 0, 0.5), 
+1px 6px 1px rgba(0, 0, 0, 0.5), 
+1px 7px 1px rgba(0, 0, 0, 0.5), 
+1px 8px 1px rgba(0, 0, 0, 0.5), 
+1px 9px 1px rgba(0, 0, 0, 0.5), 
+1px -3px 1px rgba(0, 0, 0, 0.5), 
+1px 16px 6px rgba(0, 0, 0, 0.445), 1px 22px 10px rgb(16 16 16 / 5%), 1px 25px 35px rgb(16 16 16 / 15%);
+
+$colorMainTitle : #fffdb3ed;
+$colorSecondTitle : rgb(212, 209, 209);
+$colorText:#5a54a5ed;
+
+$bgBox: #fff2f2;
+
+
+
 
 // responsive design
 @mixin phone {

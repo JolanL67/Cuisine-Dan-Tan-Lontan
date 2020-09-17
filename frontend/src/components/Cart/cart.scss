@@ -1,19 +1,33 @@
 @import 'src/styles/vars';
 
 .cart {
-  font-family: Lobster Two,cursive;
+  font-family: $fontFamilyText;
+  font-size: $fontSizeTextXl;
+  font-weight: 500;
+
+  .cart_content_cart_list_item{
+    margin-bottom: 0.2em;
+    color: #655fa9bd;
+  }
 
   @include phone {
     margin: 1em auto;
-    width: 94%;
+    width: 90%;
     .cart_content {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      flex-direction: column;
     }
     .cart_price {
-      margin-top: 1rem;
+      margin-top: 2em;
       text-align: center;
     }
+    .cart_price span{
+      margin-top: 2em;
+      text-align: center;
+      color: #655fa9bd ;
+    }
+
  }
  @include sm {
    
@@ -22,7 +36,13 @@
 
 }
 @include xl {
-
+  margin: 2em auto;
+  width: 90%;
+  .cart_content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
 
 
 }

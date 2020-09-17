@@ -1,154 +1,124 @@
 import React from 'react';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+
 import './menu.scss';
 
+import Cake from 'src/assets/image/cake.png';
+import Chef from 'src/assets/image/chef.png';
+import Clock from 'src/assets/image/clock.png';
+import Taco from 'src/assets/image/taco.png';
+import Food from 'src/assets/image/food-serving.png';
 
-const PlatChaud = [
-  {
-    type: 'plat_chaud', name: 'Rougail Saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille La Morue', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille Boucané', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Carry Poulet', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Carry Crevette au combava', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'carry poisson au gingembres', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Carry poulet massalé', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Carry Ti jacque', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Carry pates cochon au pois cap', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'sauté de boeuf au oignons', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'sauté de boeuf aux bredes chinois', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'plat_chaud', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-];
+const onClick = (e, data) => {
+  console.log(e.currentTarget.id);
+};
 
-const ApeCreole = [
-  {
-    type: 'Aperitif_creole', name: 'Samoussa Boeuf', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Samoussa Poulet', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Samoussa Fromage', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Bouchon Poulet ', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Bouchon Porc', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'carry poisson au gingembres', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Carry poulet massalé', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Carry Ti jacque', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Carry pates cochon au pois cap', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'sauté de boeuf au oignons', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'sauté de boeuf aux bredes chinois', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-  {
-    type: 'Aperitif_creole', name: 'Rougaille saucisse', ingredient: 'Salade, Tomates, Oignons...', price: '8.50€',
-  },
-];
+const Menu = ({meals}) => {
 
-const Menu = () => (
-  <div className="cdtl_menu">
-    <h1 className="cdtl_menu_title">Notre Carte</h1>
-    <h2 className="cdtl_menu_title_type">Nos plats Chaud</h2>
-    <div className="cdtl_menu_type_container">
-      {PlatChaud.map((plat) => {
-        //console.log(plat.title);
-        return (
-          <div className="cdtl_menu_card">
-            <div className="cdtl_menu_cardLeft">
-              <h3>{plat.name}</h3>
-              <p>{plat.ingredient}</p>
-              <p>{plat.price} <AddShoppingCartIcon /></p>
+  const platChaud = meals.filter((meal) => meal.type === 'Plats chaud');
+  const aperitifCreole = meals.filter((meal) => meal.type === 'Apéritif Créole');
+  const homeCake = meals.filter((meal) => meal.type === 'Gâteaux fait Maison');
+  const ourSandwich = meals.filter((meal) => meal.type === 'Nos sandwichs réunionnais');
+  const theButcher = meals.filter((meal) => meal.type === 'Boucherie');
+
+/* console.log(platChaud);
+console.log(aperitifCreole);
+console.log(homeCake);
+console.log(ourSandwich);
+console.log(theButcher); */
+
+  return (
+    <div className="cdtl_menu">
+      <h1 className="cdtl_menu_title">La Carte</h1>
+      <h2 className="cdtl_menu_title_type">
+        Nos plats Chaud
+        <img className="cdtl_menu_img_type" src={Food} alt= "type food" />
+      </h2>
+      <div className="cdtl_menu_type_container">
+        {platChaud.map((plat) => {
+          return (
+            <div className="cdtl_menu_card">
+              <div className="cdtl_menu_cardLeft">
+                <h3 className="cdtl_menu_card_title">{plat.name}</h3>
+                <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
+                <p className="cdtl_menu_card_price">{plat.price}€ <button onClick={onClick} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+              </div>
             </div>
-            <div className="cdtl_menu_cardRight">
+          );
+        })}
+      </div>
+      <h2 className="cdtl_menu_title_type">
+        Nos Appéritif Créole
+        <img className="cdtl_menu_img_type" src={Clock} alt= "type food" />   
+      </h2>
+      <div className="cdtl_menu_type_container">
+        {aperitifCreole.map((plat) => {
+          return (
+            <div className="cdtl_menu_card">
+              <div className="cdtl_menu_cardLeft">
+                <h3 className="cdtl_menu_card_title">{plat.name}</h3>
+                <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
+                <p className="cdtl_menu_card_price">{plat.price}€ <button onClick={onClick} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+      <h2 className="cdtl_menu_title_type">
+        Nos Sandwichs Réunionnais
+        <img className="cdtl_menu_img_type" src={Taco} alt= "type food" />   
+      </h2>
+      <div className="cdtl_menu_type_container">
+        {ourSandwich.map((plat) => {
+          return (
+            <div className="cdtl_menu_card">
+              <div className="cdtl_menu_cardLeft">
+                <h3 className="cdtl_menu_card_title">{plat.name}</h3>
+                <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
+                <p className="cdtl_menu_card_price">{plat.price}€ <button onClick={onClick} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <h2 className="cdtl_menu_title_type">
+        Nos Désserts
+        <img className="cdtl_menu_img_type" src={Cake} alt= "type food" />
+    </h2>
+      <div className="cdtl_menu_type_container">
+        {homeCake.map((plat) => {
+          return (
+            <div className="cdtl_menu_card">
+              <div className="cdtl_menu_cardLeft">
+                <h3 className="cdtl_menu_card_title">{plat.name}</h3>
+                <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
+                <p className="cdtl_menu_card_price">{plat.price}€ <button onClick={onClick} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <h2 className="cdtl_menu_title_type">
+        Traiteur "boucherie"
+        <img className="cdtl_menu_img_type" src={Chef} alt= "type food" />   
+      </h2>
+      <div className="cdtl_menu_type_container">
+        {theButcher.map((plat) => {
+          return (
+            <div className="cdtl_menu_card">
+              <div className="cdtl_menu_cardLeft">
+                <h3 className="cdtl_menu_card_title">{plat.name}</h3>
+                <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
+                <p className="cdtl_menu_card_price">{plat.price}€/Kg <button onClick={onClick} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
-    <h2 className="cdtl_menu_title_type">Aperitifs Creole</h2>
-    <div className="cdtl_menu_type_container">
-      {ApeCreole.map((plat) => {
-        //console.log(plat.title);
-        return (
-          <div className="cdtl_menu_card">
-            <div className="cdtl_menu_cardLeft">
-              <h3>{plat.name}</h3>
-              <p>{plat.ingredient}</p>
-              <p>{plat.price} <AddShoppingCartIcon /></p>
-            </div>
-            <div className="cdtl_menu_cardRight">
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  </div>
-);
+  );
+};
+
+
 
 export default Menu;

@@ -13,25 +13,12 @@ max-width: fit-content;
 
     .cdtl_presentation_Maintitle{
         text-align: center;
-        font-family: niconne, cursive;
-        font-size: 3em;
-        font-weight: 700;
-        color: #f5f5f5;
-         text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #f1ebeb,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(130, 211, 24, 0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
-    padding: 0.8em 0;
+        font-family: $fontFamilyMainTitle;
+        font-size: $fontSizeTitlePhone;
+        font-weight: $fontWeightTitle;
+        color: $colorMainTitle;
+        text-shadow: $textShadowTitle;
+        padding: $spaceAroundTitle ;
     }
 
     .cdtl_presentation{
@@ -44,9 +31,13 @@ max-width: fit-content;
     
     .cdtl_presentation_title{
         font-size: 2em;
-        font-family: 'Lobster Two', cursive;
+        padding-bottom: 1em;
+        font-family: Lobster Two,cursive;
         width: 100%;
-        text-align:center;
+        text-align: left;
+        color: ghostwhite;
+        text-shadow: 4px 1px 9px black;
+        
     }
 
     .cdtl_presentation_image{
@@ -59,10 +50,11 @@ max-width: fit-content;
     
     
     .cdtl_presentation_description{
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         text-align: justify;
-        font-size: 0.7em;
+        font-size: 1em;
+        font-family: 'Cormorant', serif;
     }
 }
 
@@ -70,25 +62,12 @@ max-width: fit-content;
 
     .cdtl_presentation_Maintitle{
         text-align: center;
-        font-family: niconne, cursive;
-        font-size: 7em;
-        font-weight: 700;
-        color: #f5f5f5;
-         text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #f1ebeb,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(130, 211, 24, 0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
-    padding: 0 0 0.8em 0;
+        font-family: $fontFamilyMainTitle;
+        font-size: $fontSizeTitleXl;
+        font-weight: $fontWeightTitle;
+        color: $colorMainTitle;
+        text-shadow: $textShadowTitle;
+        padding: $spaceAroundTitle ;
     }
 
     .cdtl_presentation{
@@ -100,10 +79,14 @@ max-width: fit-content;
     }
     
     .cdtl_presentation_title{
-        font-size: 2em;
-        font-family: 'Lobster Two', cursive;
+        font-size: 3em;
+        padding-bottom: 1em;
+        font-family: Lobster Two,cursive;
         width: 100%;
-        text-align: center;
+        text-align: left;
+        color: ghostwhite;
+        text-shadow: 4px 1px 9px black;
+        
     }
 
     .cdtl_presentation_image{
@@ -116,10 +99,11 @@ max-width: fit-content;
     
     
     .cdtl_presentation_description{
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         text-align: justify;
-        font-size: 0.7em;
+        font-size: 1em;
+        font-family: 'Cormorant', serif;
     }
 }
 
@@ -127,24 +111,12 @@ max-width: fit-content;
 
     .cdtl_presentation_Maintitle{
         text-align: center;
-        font-family: niconne, cursive;
-        font-size: 7em;
-        font-weight: 700;
-         text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #f1ebeb,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(130, 211, 24, 0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
-    padding: 0.3em 0 0.8em 0;
+        font-family: $fontFamilyMainTitle;
+        font-size: $fontSizeTitleXl;
+        font-weight: $fontWeightTitle;
+        color: $colorMainTitle;
+        text-shadow: $textShadowTitle;
+        padding: $spaceAroundTitle ;
     }
 
     .cdtl_presentation{

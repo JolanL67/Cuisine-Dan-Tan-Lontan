@@ -1,12 +1,11 @@
 @import 'src/styles/vars';
 
-
-.cdtl_homepage_title {
+.cdtl_homepage_text{
     padding-top: 1em;
-    line-height: 15vh;
-    text-align: center;
+    width: 95%;
+    margin: 0 auto;
     font-family: niconne, cursive;
-    font-size: 10em;
+    font-size: 2em;
     font-weight: 700;
     color: #f5f5f5;
     text-shadow: 1px 1px 1px #919191,
@@ -24,46 +23,53 @@
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
 }
-@include phone {
-  .cdtl_homepage_title {
-    background-image: url(https://c.wallhere.com/photos/f9/dc/ocean_sunset_mer_beach_reunion_island_soleil_indian-980940.jpg!d);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+
+.cdtl_homepage_title {
     padding-top: 1em;
     text-align: center;
-    font-family: niconne, cursive;
-    font-size: 4em;
-    font-weight: 700;
-    color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #000000,
-        1px 9px 1px #ffffff,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
+    border-bottom: #000000 solid 13px;
+}
+
+@include phone {
+
+    .cdtl_homepage_text{
+        padding-top: 1.3em;
+        width: 95%;
+        margin: 0 auto;
+        font-family: niconne, cursive;
+        font-size: 2.7em;
+        font-weight: 700;
+        color: #b7ffb7;
+        text-shadow: 
+            1px 1px 1px #000000, 
+            1px 2px 1px #000000, 
+            1px 3px 1px #efff00, 
+            1px 4px 1px #fffd00, 
+            1px 5px 1px #ff0000, 
+            1px 6px 1px #ff0000, 
+            1px 7px 1px #ff0000, 
+            1px 8px 1px #f00, 
+            1px 9px 1px #000, 
+            1px 10px 1px #e6e6e6, 
+            1px 18px 6px rgb(16 16 16 / 34%), 
+            1px 22px 10px rgba(16,16,16,.2), 
+            1px 25px 35px rgba(16,16,16,.2);
+    }
+  .cdtl_homepage_title {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: none;
+    border-bottom: none;
 }
 }
 
 @include md{
-    .cdtl_homepage_title {
-        background-image: url(https://c.wallhere.com/photos/f9/dc/ocean_sunset_mer_beach_reunion_island_soleil_indian-980940.jpg!d);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        padding-top: 1em;
-        line-height: 15vh;
-        text-align: center;
+    .cdtl_homepage_text{
+        width: 95%;
+        margin: 0 auto;
         font-family: niconne, cursive;
-        font-size: 7em;
+        font-size: 5em;
         font-weight: 700;
         color: #f5f5f5;
         text-shadow: 1px 1px 1px #919191,
@@ -80,25 +86,25 @@
         1px 22px 10px rgba(16,16,16,0.2),
         1px 25px 35px rgba(16,16,16,0.2),
         1px 30px 60px rgba(16,16,16,0.4);
+    }
+
+    .cdtl_homepage_title {
+        background-image: url(https://images.pexels.com/photos/1340116/pexels-photo-1340116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        padding-top: 1em;
+        border-bottom: #000000 solid 13px;
     }
 }
 
 @include xl{
     .cdtl_homepage_text{
-        position: relative;
-        top: 200px;
-    }
-    .cdtl_homepage_title {
-        background-image: url(https://c.wallhere.com/photos/f9/dc/ocean_sunset_mer_beach_reunion_island_soleil_indian-980940.jpg!d);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        padding-top: 1em;
-        padding-bottom: 0.5em;
-        line-height: 15vh;
-        text-align: center;
+        
+        width: 95%;
+        margin: 0 auto;
         font-family: niconne, cursive;
-        font-size: 9em;
+        font-size: 6.5em;
         font-weight: 700;
         color: #f5f5f5;
         text-shadow: 1px 1px 1px #919191,
@@ -115,5 +121,13 @@
         1px 22px 10px rgba(16,16,16,0.2),
         1px 25px 35px rgba(16,16,16,0.2),
         1px 30px 60px rgba(16,16,16,0.4);
+    }
+    .cdtl_homepage_title {
+        background-image: url(https://images.pexels.com/photos/1340116/pexels-photo-1340116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        border-bottom: #000000 solid 13px;
     }
 }

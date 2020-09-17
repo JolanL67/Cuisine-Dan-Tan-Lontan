@@ -5,19 +5,12 @@ import './title.scss';
 
 const Title = () => (
   <>
-   <div className="cdtl_homepage_title">
-    <div className="cdtl_homepage_text">
-      Bienvenue
+    <div className="cdtl_homepage_title">
+      <div className="cdtl_homepage_text">
+        Cuisine Dan Tan Lontan 974
+      </div>
     </div>
-    <div className="cdtl_homepage_text">
-      chez
-    </div>
-    <div className="cdtl_homepage_text">
-      Cuisine Dan Tan Lontan 974
-    </div>
-  </div>
   </>
 );
-
 
 export default Title;
