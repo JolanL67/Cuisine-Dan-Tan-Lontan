@@ -1,0 +1,55 @@
+.authenticateMessage {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.authenticateMessage > h1 {
+    text-shadow:   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px 1px 2px #141414,
+    1px 1px 3px #141414,
+    1px 1px 5px #141414,
+    1px 1px 7px #141414,
+    1px 1px 10px #141414,
+    1px 1px 12px #141414,
+    1px 1px 18px #141414;color:#fff;
+}
+
+.authenticateMessage > p {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    font-weight: bold;
+    color: deepskyblue;
+    text-shadow:   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px 1px 2px #141414,
+    1px 1px 3px #141414,
+    1px 1px 5px #141414,
+    1px 1px 7px #141414,
+    1px 1px 10px #141414,
+    1px 1px 12px #141414,
+    1px 1px 18px #141414;
+}
+
+.welcomeTitle {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bold;
+    display: block;
+    margin-top: 2rem;
+    text-shadow:   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px 1px 2px #141414,
+    1px 1px 3px #141414,
+    1px 1px 5px #141414,
+    1px 1px 7px #141414,
+    1px 1px 10px #141414,
+    1px 1px 12px #141414,
+    1px 1px 18px #141414;color:#fff;
+}
