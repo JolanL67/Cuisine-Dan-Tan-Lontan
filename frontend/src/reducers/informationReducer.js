@@ -1,8 +1,9 @@
 import { SAVE_PRESENTATION } from '../action/information';
 
 const initialState = {
-  presentation: 'lololo',
+  presentation: '',
   loading: true,
+  contact: [],
 };
 
 const menuReducer = (state = initialState, action = {}) => {

@@ -9,23 +9,22 @@ import Clock from 'src/assets/image/clock.png';
 import Taco from 'src/assets/image/taco.png';
 import Food from 'src/assets/image/food-serving.png';
 
-const onClick = (e, data) => {
-  console.log(e.currentTarget.id);
-};
+const Menu = ({meals, addToCart, cart}) => {
 
-const Menu = ({meals}) => {
+  const onClick = (e, data) => {
+    let addedItem = meals.find((item) => item.name === e.currentTarget.id);
+    let itemPrice = meals.find((item) => item.price === e.currentTarget.price);
+    console.log(addedItem.price);
+    console.log(addedItem);
+    addToCart(addedItem);
 
+  };
+ 
   const platChaud = meals.filter((meal) => meal.type === 'Plats chaud');
   const aperitifCreole = meals.filter((meal) => meal.type === 'Apéritif Créole');
   const homeCake = meals.filter((meal) => meal.type === 'Gâteaux fait Maison');
   const ourSandwich = meals.filter((meal) => meal.type === 'Nos sandwichs réunionnais');
   const theButcher = meals.filter((meal) => meal.type === 'Boucherie');
-
-/* console.log(platChaud);
-console.log(aperitifCreole);
-console.log(homeCake);
-console.log(ourSandwich);
-console.log(theButcher); */
 
   return (
     <div className="cdtl_menu">

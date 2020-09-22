@@ -2,11 +2,11 @@
 import React, { useEffect } from 'react';
 
 // == Import
+import Menu from 'src/containers/Menu';
 import Header from '../Header';
 import Presentation from '../Presentation';
 import Footer from '../Footer';
 import Form from '../Form';
-import Menu from '../Menu';
 import Loader from '../Loader';
 
 import './app.scss';
@@ -26,7 +26,7 @@ console.log(meals);
         <>
           <Header />
           <Presentation presentation={presentation} />
-          <Menu meals={meals} />
+          <Menu />
           <Form />
           <Footer />
         </>

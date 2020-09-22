@@ -1,22 +1,22 @@
 import { connect } from 'react-redux';
-import Cart from 'src/components/Cart';
+import Menu from 'src/components/Menu';
 import { addToCart } from 'src/action/cart';
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
+  meals: state.menu.meals,
   cart: state.menu.cart,
-  total: state.menu.total,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: callback qui contient un appel à dispatch
   // With dispatch we send the action in the reducer
-  addToCart: (meal) => {
-    dispatch(addToCart(meal));
+  addToCart: (item) => {
+    dispatch(addToCart(item));
   },
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Cart);
+)(Menu);
