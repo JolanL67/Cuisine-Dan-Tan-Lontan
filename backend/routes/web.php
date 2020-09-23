@@ -38,3 +38,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 // Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 // Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+
+Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
+Route::get('/presentation/edit', 'PresentationController@edit')->name('presentation.edit');
+Route::put('/presentation/update', 'PresentationController@update')->name('presentation.update');
