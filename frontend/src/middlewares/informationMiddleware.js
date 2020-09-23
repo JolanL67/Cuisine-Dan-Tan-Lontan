@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_PRESENTATION, savePresentation } from '../action/information';
+import { GET_PRESENTATION, savePresentation, GET_CONTACT, saveContact } from '../action/information';
 
 const menuMiddleware = (store) => (next) => (action) => {
   // console.log('on a intercepté une action dans le middleware: ', action);
@@ -17,7 +17,19 @@ const menuMiddleware = (store) => (next) => (action) => {
         });
       next(action);
       break;
-
+      case GET_CONTACT:
+        axios.get('https://api.cuisinelontan974.fr/api/v1/contact')
+          .then((response) => {
+           console.log(response.data);
+          // je voudrais enregistrer response.data dans le state => nouvelle action
+          // console.log(response);
+          store.dispatch(saveContact(response.data));
+          })
+          .catch((error) => {
+            console.warn(error);
+          });
+        next(action);
+        break;
 
     default:
     // on passe l'action au suivant (middleware suivant ou reducer)

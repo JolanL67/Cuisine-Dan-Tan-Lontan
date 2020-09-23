@@ -2,32 +2,55 @@
 import React, { useEffect } from 'react';
 
 // == Import
-import Menu from 'src/containers/Menu';
+import Menus from 'src/containers/Menus';
+import Footer from 'src/containers/Footer';
 import Header from '../Header';
 import Presentation from '../Presentation';
-import Footer from '../Footer';
 import Form from '../Form';
 import Loader from '../Loader';
 
 import './app.scss';
 
+import Fade from 'react-reveal/Fade';
+
 
 // == Composant
-const App = ({ getAllMeal, getPresentation, presentation, meals, loading}) => {
+const App = ({
+  getContact,
+  getAllMeal,
+  getPresentation,
+  presentation,
+  loadingDescription,
+  loadingMenu,
+  loadingContact,
+}) => {
   useEffect(() => {
+    getContact();
     getAllMeal();
     getPresentation();
   }, []);
-console.log(meals);
+
   return (
     <div className="cdtl_app">
-      {loading && <Loader />}
-      {!loading && (
+      {loadingDescription && <Loader />}
+      {!loadingDescription && (
         <>
           <Header />
-          <Presentation presentation={presentation} />
-          <Menu />
+          <Fade right>
+            <Presentation presentation={presentation} />
+          </Fade>
+        </>
+      )}
+      {loadingMenu && <Loader />}
+      {!loadingMenu && (
+        <>
+          <Menus />
           <Form />
+        </>
+      )}
+      {loadingContact && <Loader />}
+      {!loadingContact && (
+        <>
           <Footer />
         </>
       )}

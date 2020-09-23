@@ -1,4 +1,4 @@
-import { SAVE_ALL_MEAL } from '../action/menu';
+import { SAVE_ALL_MEAL, GET_TYPE, ALL_MEAL_BY_TYPE } from '../action/menu';
 import {
   ADD_TO_CART,
   REMOVE_ITEM,
@@ -10,9 +10,26 @@ const initialState = {
   meals: [],
   cart: [],
   total: 0,
+  loadingMenu: true,
+  typeSelected: 'Plats chaud',
+  mealTypeList: [],
 };
 
 const menuReducer = (state = initialState, action = {}) => {
+  if (action.type === ALL_MEAL_BY_TYPE) {
+    return {
+      ...state,
+      mealTypeList: action.mealList,
+    };
+  }
+
+  if (action.type === GET_TYPE) {
+    return {
+      ...state,
+      typeSelected: action.typeName,
+    };
+  }
+
   if (action.type === ADD_TO_CART) {
     let newTotal = +state.total + +action.item.price;
     return {
@@ -67,6 +84,7 @@ const menuReducer = (state = initialState, action = {}) => {
     return {
       ...state,
       meals: action.meal,
+      loadingMenu: false,
     };
   }
   return state;

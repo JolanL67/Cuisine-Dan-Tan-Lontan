@@ -16,6 +16,7 @@
     padding-top: 1em;
     text-align: center;
     border-bottom: #000000 solid 13px;
+    filter: opacity(0.75);
 }
 
 @include phone {

@@ -1,8 +1,9 @@
-import { SAVE_PRESENTATION } from '../action/information';
+import { SAVE_CONTACT, SAVE_PRESENTATION } from '../action/information';
 
 const initialState = {
   presentation: '',
-  loading: true,
+  loadingDescription: true,
+  loadingContact: true,
   contact: [],
 };
 
@@ -12,7 +13,13 @@ const menuReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         presentation: action.description,
-        loading: false,
+        loadingDescription: false,
+      };
+    case SAVE_CONTACT:
+      return {
+        ...state,
+        contact: action.contact,
+        loadingContact: false,
       };
     default: return state;
   }
