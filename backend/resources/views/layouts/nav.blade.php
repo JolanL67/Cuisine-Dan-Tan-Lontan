@@ -2,10 +2,10 @@
 
 <nav class="navbar-notboostrap">
     <div class="homeLink">
-        <a class="navbar-title" href="#">CDTL</a>
+    <a class="navbar-title" href="{{ route('home') }}">CDTL</a>
     </div>
     <div class="featureLink">
-        <a class="navbar-title" href="#">Menu</a>
+    <a class="navbar-title" href="{{ route('menu') }}">Menu</a>
         <a class="navbar-title" href="#">Présentation</a>
         <a class="navbar-title" href="#">Contact</a>
         @auth

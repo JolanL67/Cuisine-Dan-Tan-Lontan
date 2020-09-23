@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\MenuController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,13 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})/*->middleware('auth')*/;
+})->middleware('auth')->name('home');
 
 Auth::routes([
     'register' => false,
     ]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/menu', 'MenuController@browse')->name('menu');
 
 // // Authentication Routes...
 // Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

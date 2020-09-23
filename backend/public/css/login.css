@@ -1,12 +1,8 @@
-body {
-    background-image: url('/images/reunion.jpg');
-}
-
-.card {
+.main-card {
     text-align: center;
 }
 
-.card-header {
+.title-header {
     font-size: 3rem;
     font-weight: bold;
     font-style: italic;
@@ -23,14 +19,25 @@ body {
     1px 1px 18px #141414;color:#fff;
 }
 
-.titlePage {
+.title-page {
     margin-top: 2rem;
     font-size: 2rem;
+    text-shadow:   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px 1px 2px #141414,
+    1px 1px 3px #141414,
+    1px 1px 5px #141414,
+    1px 1px 7px #141414,
+    1px 1px 10px #141414,
+    1px 1px 12px #141414,
+    1px 1px 18px #141414;color:#fff;
 }
 
-.card-body {
+.body-card {
     position: relative;
-    top: 7rem;
+    top: 5rem;
 }
 
 .form-group {
@@ -43,7 +50,7 @@ body {
     font-size: 1.2rem;
 }
 
-.labelLogin {
+.label-login {
     font-size: 1.7rem;
     text-shadow: -1px -1px 0 #fff,  
     1px -1px 0 #fff,
@@ -53,7 +60,7 @@ body {
     color:#333;
 }
 
-.btn-primary {
+.btn-login, .btn-reset-password {
     display: block;
     margin: auto;
     color: white;
@@ -68,13 +75,14 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.btn-primary:hover {
+.btn-login:hover, .btn-reset-password:hover {
     transition: 1s;
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 .form-check-label {
     position: relative;
+    margin-left: 1rem;
     bottom: 0.2rem;
     font-size: 1.3rem;
     text-shadow: -1px -1px 0 #fff,  
