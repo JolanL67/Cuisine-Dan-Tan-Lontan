@@ -18,6 +18,8 @@ class CreatePresentationsTable extends Migration
             $table->string('description', 2000);
             $table->string('thumbnail', 255);
             $table->string('bg_image', 255);
+            $table->string('command_info', 500);
+            $table->string('payment_info', 500);
             $table->timestamps();
         });
     }
