@@ -2,3 +2,7 @@ body {
     font-family: 'Oxygen', sans-serif;
     background-color: #1777d68c;
 }
+
+.alert-success {
+    text-align: center;
+}

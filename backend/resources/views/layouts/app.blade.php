@@ -28,7 +28,7 @@
 <body>
     <div id="app">
             <div class="container">
-                        
+                @include('flash-message')
             </div>
         <main class="py-4">
             @yield('content')

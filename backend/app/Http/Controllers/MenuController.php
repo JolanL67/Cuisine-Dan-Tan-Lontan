@@ -30,6 +30,15 @@ class MenuController extends Controller
 
         $menu->save();
 
-        return redirect('menu');
+        return redirect('menu')->with('success', 'Votre plat a bien été ajouté !');
+    }
+
+    public function delete($menuId)
+    {
+        $menu = Menu::find($menuId);
+        
+        $menu->delete();
+
+        return redirect()->route('menu')->with('success', 'Votre plat a bien été supprimé !');
     }
 }

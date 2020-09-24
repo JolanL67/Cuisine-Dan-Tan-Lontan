@@ -23,9 +23,11 @@ Auth::routes([
     'register' => false,
     ]);
 
-Route::get('/menu', 'MenuController@browse')->name('menu');
-Route::view('/menu/add', 'menu/add');
-Route::post('/menu/add', 'MenuController@add')->name('menu.add');
+Route::get('/menu', 'MenuController@browse')->middleware('auth')->name('menu');
+Route::view('/menu/add', 'menu/add')->middleware('auth');
+Route::post('/menu/add', 'MenuController@add')->middleware('auth')->name('menu.add');
+
+Route::delete('/menu/delete/{id}', 'MenuController@delete')->middleware('auth')->name('menu.delete');
 
 // // Authentication Routes...
 // Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

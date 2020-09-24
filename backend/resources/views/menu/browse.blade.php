@@ -39,7 +39,11 @@
             <td>{{$item->updated_at ?? 'Non modifié'}}</td>
             <td>
                 <a href="">Modifier</a>
-                <a href="" onclick="return confirm('Êtes vous sûr de vouloir supprimer cet élément ?')">Supprimer</a>
+                <form action="{{ route('menu.delete', ['id' => $item->id]) }}" method="POST">
+                  @csrf
+                  @method('delete')
+                  <button type="submit" class="btn btn-outline-danger">Supprimer</button>
+              </form>
             </td>
         </tr>
         @endforeach
