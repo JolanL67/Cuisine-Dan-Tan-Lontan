@@ -32,7 +32,7 @@ class ContactController extends Controller
     {
         $contact = Contact::all()[0];
 
-        $phone = implode(explode('.', $contact->phone));
+        $phone = implode(explode(' ', $contact->phone));
         $contact->phone = $phone;
 
         return view('contact.edit', [

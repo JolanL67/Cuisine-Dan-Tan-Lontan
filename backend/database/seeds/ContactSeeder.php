@@ -13,7 +13,7 @@ class ContactSeeder extends Seeder
     public function run()
     {
         DB::table('contacts')->insert([
-            'phone' => '06.51.14.07.56',
+            'phone' => '06 51 14 07 56',
             'mail' => 'cuisinelontan974@gmail.com',
             'facebook' => 'https://www.facebook.com/Cuisine-dan-tan-lontan-974-109778123964453',
             'instagram' => 'https://www.instagram.com/cuisinedantanlontan/?hl=fr',
