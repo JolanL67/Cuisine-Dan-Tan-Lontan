@@ -16,8 +16,7 @@ class PresentationController extends Controller
      */
     public function show(Presentation $presentation)
     {
-        $presentation = Presentation::all();
-        $presentation = $presentation[0];
+        $presentation = Presentation::all()[0];
 
         return view('presentation.show', [
             'presentation' => $presentation,
@@ -48,11 +47,6 @@ class PresentationController extends Controller
      */
     public function update(PresentationRequest $request, Presentation $presentation)
     {
-        // TODO Changer le nom des attributs pour les message d'erreur
-        // https://laraveldaily.com/laravel-validation-specify-attribute-names-for-error-messages/
-        // https://laravel.sillo.org/cours-laravel-5-5-les-bases-la-validation/
-        // https://laravel.com/docs/7.x/validation#customizing-the-validation-attributes
-
 
         $presentationModel = Presentation::all()[0];
 
@@ -83,10 +77,10 @@ class PresentationController extends Controller
         $presentationModel->command_info = $commandInfo;
 
         $paymentInfo = $request->input('payment_info');
-        $presentationModel->command_info = $paymentInfo;
+        $presentationModel->payment_info = $paymentInfo;
 
+        $presentationModel->updated_at = new \DateTime();
         $presentationModel->save();
-
 
         return redirect()->route('presentation.show', [
             'presentation' => $presentation,

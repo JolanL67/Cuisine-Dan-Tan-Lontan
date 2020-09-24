@@ -59,7 +59,16 @@ class PresentationRequest extends FormRequest
         return [
             'description.required' => 'Le champ :attribute doit être renseigné',
             'description.max' => 'Le champ :attribute ne doit pas excéder :max caractères.',
-            // TODO message d'erreur
+            'thumbnail.image' => 'Le champ :attribute doit être une image ( jpeg, png, jpg, gif )',
+            'thumbnail.mimes' => 'Le champ :attribute n\'accepte que les fichiers de type: :values.',
+            'thumbnail.max' => 'Le champ :attribute ne doit pas excéder :max kilobytes.',
+            'bg_image.image' => 'Le champ :attribute doit être une image ( jpeg, png, jpg, gif )',
+            'bg_image.mimes' => 'Le champ :attribute n\'accepte que les fichiers de type: :values.',
+            'bg_image.max' => 'Le champ :attribute ne doit pas excéder :max kilobytes.',
+            'command_info.required' => 'Le champ :attribute doit être renseigné',
+            'command_info.max' => 'Le champ :attribute ne doit pas excéder :max caractères.',
+            'payment_info.required' => 'Le champ :attribute doit être renseigné',
+            'payment_info.max' => 'Le champ :attribute ne doit pas excéder :max caractères.',
         ];
     }
 
