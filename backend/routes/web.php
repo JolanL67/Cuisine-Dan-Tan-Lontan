@@ -27,7 +27,11 @@ Route::get('/menu', 'MenuController@browse')->middleware('auth')->name('menu');
 Route::view('/menu/add', 'menu/add')->middleware('auth');
 Route::post('/menu/add', 'MenuController@add')->middleware('auth')->name('menu.add');
 
+Route::get('/menu/edit/{id}', 'MenuController@edit')->middleware('auth')->name('menu.edit');
+Route::put('/menu/edit/{id}', 'MenuController@update')->middleware('auth')->name('menu.update');
+
 Route::delete('/menu/delete/{id}', 'MenuController@delete')->middleware('auth')->name('menu.delete');
+// https://laravel.com/docs/master/routing#route-model-binding
 
 // // Authentication Routes...
 // Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

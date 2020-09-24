@@ -26,7 +26,8 @@ class MenuRequest extends FormRequest
         return [
             'type' => [
                 'required',
-                'max:255'
+                'max:255',
+                'in:Plats chaud, Accompagnements, Apéritif Créole, Gâteaux fait Maison, Boucherie, Nos sandwichs réunionnais',
             ],
             'name' => [
                 'required',
@@ -42,6 +43,7 @@ class MenuRequest extends FormRequest
             'is_discount' => [
                 'required',
                 'boolean',
+                'in:0, 1',
             ],
             'nb_unit' => [
                 'integer',
@@ -64,11 +66,13 @@ class MenuRequest extends FormRequest
         return [
             'type.required' => 'Le champ :attribute doit être renseigné.',
             'type.max' => 'Le champ :attribute ne doit pas excéder :max caractères.',
+            'type.in' => 'Le champ :attribute selectionné est invalide',
             'name.required' => 'Le champ :attribute doit être renseigné.',
             'price.required' => 'Le champ :attribute doit être renseigné.',
             'price.numeric' => 'Le champ :attribute doit être un nombre entier ou décimal (nombre décimal avec un point et non une virgule).',
             'is_discount.required' => 'Le champ :attribute doit être renseigné',
             'is_discount.boolean' => 'Le champ :attribute n\'accepte que 1 si il y a une remise, et 0 si il n\'y en a pas.',
+            'is_discount.in' => 'Le champ :attribute selectionné est invalide',
             'nb_unit.integer' => 'Le champ :attribute doit être un nombre entier.',
             'discount_price.numeric' => 'Le champ :attribute doit être un nombre entier ou décimal (nombre décimal avec un point et non une virgule).',
         ];

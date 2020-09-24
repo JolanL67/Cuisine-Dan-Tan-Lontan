@@ -38,12 +38,12 @@
             <td>{{$item->discount_price ?? '0'}}€</td>
             <td>{{$item->updated_at ?? 'Non modifié'}}</td>
             <td>
-                <a href="">Modifier</a>
+                <a href="{{ route('menu.edit', ['id' => $item->id]) }}">Modifier</a>
                 <form action="{{ route('menu.delete', ['id' => $item->id]) }}" method="POST">
                   @csrf
                   @method('delete')
                   <button type="submit" class="btn btn-outline-danger">Supprimer</button>
-              </form>
+                </form>
             </td>
         </tr>
         @endforeach

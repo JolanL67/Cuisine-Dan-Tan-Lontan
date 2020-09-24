@@ -33,6 +33,33 @@ class MenuController extends Controller
         return redirect('menu')->with('success', 'Votre plat a bien été ajouté !');
     }
 
+    public function edit($id)
+    {
+        $menu = Menu::find($id);
+        //dd($menu);
+
+        return view('menu/edit', [
+            'menu' => $menu
+        ]);
+    }
+
+    public function update(MenuRequest $request, $id)
+    {
+        $menu = Menu::find($id);
+
+        $menu->type = $request->input('type');
+        $menu->name = $request->input('name');
+        $menu->price = $request->input('price');
+        $menu->ingredient = $request->input('ingredient');
+        $menu->is_discount = $request->input('is_discount');
+        $menu->nb_unit = $request->input('nb_unit');
+        $menu->discount_price = $request->input('discount_price');
+
+        $menu->save();
+
+        return redirect('menu')->with('success', 'Votre plat a bien été modifié');
+    }
+
     public function delete($menuId)
     {
         $menu = Menu::find($menuId);

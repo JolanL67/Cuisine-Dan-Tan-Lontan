@@ -6,16 +6,10 @@
 
 @section('content')
 
-{{-- A voir pour lundi : 
-    - Garder la data dans les input sans erreurs dans les formulaires quand il y a une erreur sur un input
-    - Quand on met Non a l'input de remise, ne pas afficher l'input Nombre remisé, et l'input prix de la remise, et les afficher
-    quand on met Oui à l'input de remise
---}}
-
 
 <div class="main-card">
     <div class="title-header">{{ __('Cuisine Dan Tan Lontan') }}</div>
-    <div class="title-page">{{ __('Ajout d\'un plat') }}</div>
+    <div class="title-page">{{ __('Modification d\'un plat') }}</div>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -29,19 +23,19 @@
 
     <div class="body-card">
 
-    <form action="{{ route('menu.add') }}" method="post" class="formAdd">
+    <form action="{{ route('menu.update', ['id' => $menu->id]) }}" method="post" class="formAdd">
         @csrf
+        @method('put')
         <div class="form-group">
             <label for="type" class="label-login">{{ __('Type de plat') }}</label>
             <div>
                 <select name="type" class="input-add">
-                    <option value="" selected disabled>Choisissez votre type de plat</option>
-                    <option value="Plats chaud">Plats chaud</option>
-                    <option value="Accompagnements">Accompagnements</option>
-                    <option value="Apéritif Créole">Apéritif Créole</option>
-                    <option value="Gâteaux fait Maison">Gâteaux fait Maison</option>
-                    <option value="Boucherie">Boucherie</option>
-                    <option value="Nos sandwichs réunionnais">Nos sandwichs réunionnais</option>
+                    <option value="Plats chaud" {{ $menu->type == 'Plats chaud' ? 'selected' : '' }}>Plats chaud</option>
+                    <option value="Accompagnements" {{ $menu->type == 'Accompagnements' ? 'selected' : '' }}>Accompagnements</option>
+                    <option value="Apéritif Créole" {{ $menu->type == 'Apéritif Créole' ? 'selected' : '' }}>Apéritif Créole</option>
+                    <option value="Gâteaux fait Maison" {{ $menu->type == 'Gâteaux fait Maison' ? 'selected' : '' }}>Gâteaux fait Maison</option>
+                    <option value="Boucherie" {{ $menu->type == 'Boucherie' ? 'selected' : '' }}>Boucherie</option>
+                    <option value="Nos sandwichs réunionnais" {{ $menu->type == 'Nos sandwichs réunionnais' ? 'selected' : '' }}>Nos sandwichs réunionnais</option>
                 </select>
             </div>
         </div>
@@ -49,21 +43,21 @@
         <div class="form-group">
             <label for="name" class="label-login">{{ __('Nom du plat') }}</label>
             <div>
-                <input type="text" name="name" class="input-add" placeholder="Le nom de votre plat...">
+            <input type="text" name="name" class="input-add" placeholder="Le nom de votre plat..." value="{{$menu->name}}">
             </div>
         </div>
         
         <div class="form-group">
             <label for="price" class="label-login">{{ __('Prix du plat') }}</label>
             <div>
-                <input type="text" name="price" class="input-add" placeholder="Le prix de votre plat...">
+                <input type="text" name="price" class="input-add" placeholder="Le prix de votre plat..." value="{{$menu->price}}">
             </div>
         </div>
         
         <div class="form-group">
             <label for="ingredient" class="label-login">{{ __('Ingrédients (optionnel)') }}</label>
             <div>
-                <textarea name="ingredient" cols="41" rows="10" placeholder="Vos ingrédients..."></textarea>
+                <textarea name="ingredient" cols="41" rows="10" placeholder="Vos ingrédients...">{{$menu->ingredient}}</textarea>
             </div>
         </div>
 
@@ -71,8 +65,8 @@
             <label for="is_discount" class="label-login">{{ __('Remise') }}</label>
             <div>
                 <select name="is_discount" class="input-add">
-                    <option value="0">Non</option>
-                    <option value="1">Oui</option>
+                    <option value="0" {{ $menu->is_discount == 0 ? 'selected' : '' }}>Non</option>
+                    <option value="1" {{ $menu->is_discount == 1 ? 'selected' : '' }}>Oui</option>
                 </select>
             </div>
         </div>
@@ -80,18 +74,18 @@
         <div class="form-group">
             <label for="nb_unit" class="label-login">{{ __('Nombre remisé (optionnel)') }}</label>
             <div>
-                <input type="text" name="nb_unit" class="input-add" placeholder="Nombre de produits pour la remise...">
+                <input type="text" name="nb_unit" class="input-add" placeholder="Nombre de produits pour la remise..." value="{{$menu->nb_unit}}">
             </div>
         </div>
 
         <div class="form-group">
             <label for="discount_price" class="label-login">{{ __('Prix de la remise (optionnel)') }}</label>
             <div>
-                <input type="text" name="discount_price" class="input-add" placeholder="Montant de la remise...">
+                <input type="text" name="discount_price" class="input-add" placeholder="Montant de la remise..." value="{{$menu->discount_price}}">
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Ajouter le plat</button></a>
+        <button type="submit" class="btn btn-success">Modifier le plat</button></a>
 
     </form>
 
