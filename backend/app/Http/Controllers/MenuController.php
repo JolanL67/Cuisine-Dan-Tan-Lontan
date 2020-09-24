@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MenuRequest;
 use App\Menu;
-use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
@@ -14,5 +14,22 @@ class MenuController extends Controller
         return view('menu/browse', [
             'menu' => $menu
         ]);
+    }
+
+    public function add(MenuRequest $request)
+    {
+        $menu = new Menu;
+
+        $menu->type = $request->input('type');
+        $menu->name = $request->input('name');
+        $menu->price = $request->input('price');
+        $menu->ingredient = $request->input('ingredient');
+        $menu->is_discount = $request->input('is_discount');
+        $menu->nb_unit = $request->input('nb_unit');
+        $menu->discount_price = $request->input('discount_price');
+
+        $menu->save();
+
+        return redirect('menu');
     }
 }

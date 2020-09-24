@@ -20,7 +20,7 @@
       <th scope="col">Nombre remisé</th>
       <th scope="col">Prix de la remise</th>
       <th scope="col">Modifié le</th>
-      <th scope="col"><a href=""><button type="submit" class="btn btn-success">Ajouter un plat</button></a></th>
+    <th scope="col"><a href="{{ route('menu.add') }}"><button type="submit" class="btn btn-success">Ajouter un plat</button></a></th>
     </tr>
   </thead>
   <tbody>
@@ -34,8 +34,8 @@
             <td>{{$item->price}}€</td>
             <td>{{$item->ingredient ?? 'Non renseigné'}}</td>
             <td>{{$item->is_discount ? 'Oui' : 'Non'}}</td>
-            <td>{{$item->nb_unit}}</td>
-            <td>{{$item->discount_price}}€</td>
+            <td>{{$item->nb_unit ?? '0'}}</td>
+            <td>{{$item->discount_price ?? '0'}}€</td>
             <td>{{$item->updated_at ?? 'Non modifié'}}</td>
             <td>
                 <a href="">Modifier</a>

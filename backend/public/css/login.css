@@ -40,14 +40,30 @@
     top: 5rem;
 }
 
+.formAdd {
+    margin-top: -3rem;
+}
+
+.alert-danger {
+    margin-bottom: -6rem;
+    margin-top: 2rem;
+    padding-bottom: 0rem;
+}
+
+.alert-danger > ul {
+    font-size: 1.2rem;
+    font-weight: bold;
+    list-style: none;
+}
+
 .form-group {
     margin-top: 2rem;
 }
 
-#email, #password {
+#email, #password, .input-add {
     width: 22rem;
     height: 2.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .label-login {
@@ -78,6 +94,10 @@
 .btn-login:hover, .btn-reset-password:hover {
     transition: 1s;
     transform: scale(1.15);
+}
+
+.btn-success {
+    margin-top: 1rem;
 }
 
 .form-check-label {

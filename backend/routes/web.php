@@ -24,6 +24,8 @@ Auth::routes([
     ]);
 
 Route::get('/menu', 'MenuController@browse')->name('menu');
+Route::view('/menu/add', 'menu/add');
+Route::post('/menu/add', 'MenuController@add')->name('menu.add');
 
 // // Authentication Routes...
 // Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
