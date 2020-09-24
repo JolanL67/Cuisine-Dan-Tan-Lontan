@@ -39,7 +39,7 @@
     </tr>
     <tr>
         <td>Mis à jour le</td>
-        <td>{{ $presentation->created_at }}</td>
+        <td>{{ date('d-m-Y G:i:s', strtotime($presentation->updated_at)) }}</td>
     </tr>
     <tr>
         <td>Actions</td>
