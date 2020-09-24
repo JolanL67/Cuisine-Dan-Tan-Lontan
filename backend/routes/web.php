@@ -39,7 +39,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 // Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+// Groupe afin d'appliquer le middleware 'auth' sur plusieurs routes
+Route::middleware(['auth'])->group(function () {
 
+});
+
+// Route Presentation
 Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
 Route::get('/presentation/edit', 'PresentationController@edit')->name('presentation.edit');
 Route::put('/presentation/update', 'PresentationController@update')->name('presentation.update');
+
+// Route Contact
+Route::get('/contact', 'ContactController@show')->name('contact.show');
+Route::get('/contact/edit', 'ContactController@edit')->name('contact.edit');
+Route::put('/contact/update', 'ContactController@update')->name('contact.update');
