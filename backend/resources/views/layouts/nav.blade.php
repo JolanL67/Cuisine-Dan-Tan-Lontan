@@ -6,8 +6,8 @@
     </div>
     <div class="featureLink">
         <a class="navbar-title" href="#">Menu</a>
-        <a class="navbar-title" href="#">Présentation</a>
-        <a class="navbar-title" href="#">Contact</a>
+        <a class="navbar-title" href="{{ route('presentation.show') }}">Présentation</a>
+        <a class="navbar-title" href="{{ route('contact.show') }}">Contact</a>
         @auth
             <a class="navbar-title" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
