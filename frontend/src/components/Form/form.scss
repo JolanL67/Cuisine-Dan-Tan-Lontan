@@ -146,8 +146,11 @@
   .contact_info {
     text-align: center;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.3em;
     margin-bottom: 1rem;
+    font-family: $fontFamilyText;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
   }
   .contact_form {
     font-family: $fontFamilyText;

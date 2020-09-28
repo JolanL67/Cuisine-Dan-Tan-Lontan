@@ -1,5 +1,9 @@
 @import 'src/styles/vars';
-
+body {
+	background-image: url(../../assets/image/second.jpg);
+	background-repeat: repeat;
+	background-size: 180%;
+}
 
 @include phone {
 	

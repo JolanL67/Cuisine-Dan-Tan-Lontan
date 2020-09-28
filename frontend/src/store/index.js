@@ -2,18 +2,21 @@
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+// import RootReducer
+import reducer from 'src/reducers';
+
 // we need to import middleware
 import menuMiddleware from 'src/middlewares/menuMiddleware';
 import informationMiddleware from 'src/middlewares/informationMiddleware';
+// import pushMiddleware from '../middlewares/pushMiddleware';
 
-// import RootReducer
-import reducer from 'src/reducers';
 
 // combine devtools and middleware
 const enhancers = composeWithDevTools(
   applyMiddleware(
     menuMiddleware,
     informationMiddleware,
+    // pushMiddleware,
   ),
 );
 

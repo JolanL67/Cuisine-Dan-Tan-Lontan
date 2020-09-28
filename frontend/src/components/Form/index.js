@@ -1,5 +1,4 @@
 import React from 'react';
-// import { DateTimePicker, KeyboardDateTimePicker } from "@material-ui/pickers";
 
 
 import './form.scss';
@@ -26,15 +25,6 @@ const Form = () => (
       <div className="contact_description">
         <textarea className="contact_description_text" name="description" id="" cols="30" rows="10" placeholder="Description*" />
       </div>
-{/*       <div className="contact_hour">
-        <>
-          <DateTimePicker
-            label="Choississez le jour et l'heure de votre commande"
-            inputVariant="outlined"
-            value={Date.now}
-          />
-        </>
-      </div> */}
     </form>
     <Cart />
     <button className="contact_button" type="submit">Commander</button>

@@ -13,6 +13,7 @@ const Menus = ({
   getAllMeal,
   allMealByType,
   mealTypeList,
+  pushGet,
 }) => {
   useEffect(() => {
     if (typeSelected !== '') {
@@ -43,25 +44,27 @@ const Menus = ({
   return (
     <div className="cdtl_menu">
       <h1 id="Notre_Carte" className="cdtl_menu_title">La Carte</h1>
-      <Menu tabular>
-          <Menu.Item id="Plats chaud" active={typeSelected === 'Plats chaud'} onClick={handleClickType} value="Plats chaud">Nos plats Chaud / </Menu.Item>
-          <Menu.Item id="Apéritif Créole" active={typeSelected === 'Apéritif Créole'} className="big-button" onClick={handleClickType} value="Apéritif Créole">Appéritif Créole / </Menu.Item>
-          <Menu.Item id="Nos sandwichs réunionnais" active={typeSelected === 'Nos sandwichs réunionnais'} className="big-button" onClick={handleClickType} value="Nos sandwichs réunionnais">Nos Sandwichs Réunionnais / </Menu.Item>
-          <Menu.Item id="Gâteaux fait Maison" active={typeSelected === 'Gâteaux fait Maison'} className="big-button" onClick={handleClickType} value="Gâteaux fait Maison">Nos Désserts / </Menu.Item>
-          <Menu.Item id="Boucherie" active={typeSelected === 'Boucherie'} className="big-button" onClick={handleClickType} value="Boucherie">Traiteur "boucherie"</Menu.Item>
+      <div className="cdtl_menuAndType">
+        <Menu tabular className="cdtl_menu_type">
+          <Menu.Item id="Plats chaud" active={typeSelected === 'Plats chaud'} onClick={handleClickType} className="type_of_meal" value="Plats chaud">Nos plats Chaud</Menu.Item>
+          <Menu.Item id="Apéritif Créole" active={typeSelected === 'Apéritif Créole'} className="type_of_meal" onClick={handleClickType} value="Apéritif Créole">Appéritif Créole</Menu.Item>
+          <Menu.Item id="Nos sandwichs réunionnais" active={typeSelected === 'Nos sandwichs réunionnais'} className="type_of_meal" onClick={handleClickType} value="Nos sandwichs réunionnais">Nos Sandwichs Réunionnais</Menu.Item>
+          <Menu.Item id="Gâteaux fait Maison" active={typeSelected === 'Gâteaux fait Maison'} className="type_of_meal" onClick={handleClickType} value="Gâteaux fait Maison">Nos Désserts</Menu.Item>
+          <Menu.Item id="Boucherie" active={typeSelected === 'Boucherie'} className="type_of_meal" onClick={handleClickType} value="Boucherie">Traiteur "boucherie"</Menu.Item>
         </Menu>
-      <div className="cdtl_menu_type_container">
-        {mealTypeList.map((plat) => {
-          return (
-            <div className="cdtl_menu_card">
-              <div className="cdtl_menu_cardLeft">
-                <h3 className="cdtl_menu_card_title">{plat.name}</h3>
-                <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
-                <p className="cdtl_menu_card_price">{plat.price}€ <button onClick={handleClickAdd} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+        <div className="cdtl_menu_type_container">
+          {mealTypeList.map((plat) => {
+            return (
+              <div className="cdtl_menu_card">
+                <div className="cdtl_menu_cardLeft">
+                  <h3 className="cdtl_menu_card_title">{plat.name}</h3>
+                  <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
+                  <p className="cdtl_menu_card_price">{plat.price}€ <button onClick={handleClickAdd} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

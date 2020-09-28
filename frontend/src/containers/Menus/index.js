@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import Menus from 'src/components/Menus';
 import { addToCart } from 'src/action/cart';
 import { getType, getAllMeal, allMealByType } from '../../action/menu';
+import { pushGet } from '../../action/push';
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
@@ -25,6 +26,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   allMealByType: (mealList) => {
     dispatch(allMealByType(mealList));
+  },
+  pushGet: () => {
+    dispatch(pushGet());
   },
 });
 

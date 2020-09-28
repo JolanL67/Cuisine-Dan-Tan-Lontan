@@ -7,7 +7,9 @@
 
   .cart_content_cart_list_item{
     margin-bottom: 0.2em;
-    color: #655fa9bd;
+    font-family: $fontFamilyText;
+    color: rgb(253, 248, 200);
+    text-shadow: 2px 2px 5px black;
   }
 
   @include phone {

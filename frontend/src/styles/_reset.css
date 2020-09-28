@@ -148,6 +148,11 @@ a {
   color: inherit;
 }
 
+a:hover{
+  color: inherit!important;
+  text-decoration: none!important;
+}
+
 label,
 button {
   cursor: pointer;

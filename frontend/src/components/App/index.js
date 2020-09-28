@@ -14,6 +14,7 @@ import './app.scss';
 import Fade from 'react-reveal/Fade';
 
 
+
 // == Composant
 const App = ({
   getContact,
@@ -36,15 +37,15 @@ const App = ({
       {!loadingDescription && (
         <>
           <Header />
-          <Fade right>
-            <Presentation presentation={presentation} />
-          </Fade>
+          <Presentation presentation={presentation} />
         </>
       )}
       {loadingMenu && <Loader />}
       {!loadingMenu && (
         <>
-          <Menus />
+          <Fade bottom>
+            <Menus />
+          </Fade>
           <Form />
         </>
       )}
