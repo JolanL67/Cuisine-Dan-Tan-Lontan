@@ -8,16 +8,6 @@
     <div class="title-header">{{ __('Cuisine Dan Tan Lontan') }}</div>
     <div class="title-page">{{ __('Réinitialisation du mot de passe') }}</div>
 
-    {{-- @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif --}}
-
     <div class="body-card">
         <form method="POST" action="{{ route('password.update') }}">
             @csrf

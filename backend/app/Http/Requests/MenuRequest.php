@@ -45,14 +45,6 @@ class MenuRequest extends FormRequest
                 'boolean',
                 'in:0, 1',
             ],
-            'nb_unit' => [
-                'integer',
-                'nullable'
-            ],
-            'discount_price' => [
-                'numeric',
-                'nullable'
-            ],
         ];
     }
 

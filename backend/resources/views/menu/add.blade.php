@@ -6,30 +6,14 @@
 
 @section('content')
 
-{{-- A voir pour lundi : 
-    - Traduire l'email de reset password V
-    https://laraveldaily.com/mail-notifications-customize-templates/ V
-    - Garder la data dans les input sans erreurs dans les formulaires quand il y a une erreur sur un input
+{{-- A voir pour lundi :
     - Quand on met Non a l'input de remise, ne pas afficher l'input Nombre remisé, et l'input prix de la remise, et les afficher
     quand on met Oui à l'input de remise
 --}}
 
-
 <div class="main-card">
     <div class="title-header">{{ __('Cuisine Dan Tan Lontan') }}</div>
     <div class="title-page">{{ __('Ajout d\'un plat') }}</div>
-
-    {{-- @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif --}}
-
-    {{-- @dump($errors) --}}
 
     <div class="body-card">
 
@@ -40,12 +24,12 @@
             <div>
                 <select name="type" class="input-add">
                     <option value="" selected disabled>Choisissez votre type de plat</option>
-                    <option value="Plats chaud">Plats chaud</option>
-                    <option value="Accompagnements">Accompagnements</option>
-                    <option value="Apéritif Créole">Apéritif Créole</option>
-                    <option value="Gâteaux fait Maison">Gâteaux fait Maison</option>
-                    <option value="Boucherie">Boucherie</option>
-                    <option value="Nos sandwichs réunionnais">Nos sandwichs réunionnais</option>
+                    <option @if( old('type')  == "Plats chaud") selected @endif value="Plats chaud">Plats chaud</option>
+                    <option @if( old('type')  == "Accompagnements") selected @endif value="Accompagnements">Accompagnements</option>
+                    <option @if( old('type')  == "Apéritif Créole") selected @endif value="Apéritif Créole">Apéritif Créole</option>
+                    <option @if( old('type')  == "Gâteaux fait Maison") selected @endif value="Gâteaux fait Maison">Gâteaux fait Maison</option>
+                    <option @if( old('type')  == "Boucherie") selected @endif value="Boucherie">Boucherie</option>
+                    <option @if( old('type')  == "Nos sandwichs réunionnais") selected @endif value="Nos sandwichs réunionnais">Nos sandwichs réunionnais</option>
                 </select>
                 @error('type')
                 <span class="invalid-feedback" role="alert">
@@ -58,7 +42,7 @@
         <div class="form-group">
             <label for="name" class="label-login">{{ __('Nom du plat') }}</label>
             <div>
-                <input type="text" id="name" name="name" class="input-add" placeholder="Le nom de votre plat...">
+                <input type="text" id="name" name="name" class="input-add" placeholder="Le nom de votre plat..." value="{{ old('name') }}">
                     @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -70,7 +54,7 @@
         <div class="form-group">
             <label for="price" class="label-login">{{ __('Prix du plat') }}</label>
             <div>
-                <input type="text" name="price" class="input-add" placeholder="Le prix de votre plat...">
+                <input type="text" name="price" class="input-add" placeholder="Le prix de votre plat..." value="{{ old('price') }}">
                     @error('price')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -82,7 +66,7 @@
         <div class="form-group">
             <label for="ingredient" class="label-login">{{ __('Ingrédients (optionnel)') }}</label>
             <div>
-                <textarea name="ingredient" cols="41" rows="10" placeholder="Vos ingrédients..."></textarea>
+                <textarea name="ingredient" cols="41" rows="10" placeholder="Vos ingrédients...">{{ old('ingredient') }}</textarea>
                     @error('ingredient')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -95,8 +79,8 @@
             <label for="is_discount" class="label-login">{{ __('Remise') }}</label>
             <div>
                 <select name="is_discount" class="input-add">
-                    <option value="0">Non</option>
-                    <option value="1">Oui</option>
+                    <option value="0" @if( old('is_discount')  == "0") selected @endif>Non</option>
+                    <option value="1" @if( old('is_discount')  == "1") selected @endif>Oui</option>
                 </select>
                     @error('is_discount')
                     <span class="invalid-feedback" role="alert">
@@ -109,7 +93,7 @@
         <div class="form-group">
             <label for="nb_unit" class="label-login">{{ __('Nombre remisé (optionnel)') }}</label>
             <div>
-                <input type="text" name="nb_unit" class="input-add" placeholder="Nombre de produits pour la remise...">
+                <input type="text" name="nb_unit" class="input-add" placeholder="Nombre de produits pour la remise..." value="{{ old('nb_unit') }}">
                     @error('nb_unit')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -121,7 +105,7 @@
         <div class="form-group">
             <label for="discount_price" class="label-login">{{ __('Prix de la remise (optionnel)') }}</label>
             <div>
-                <input type="text" name="discount_price" class="input-add" placeholder="Montant de la remise...">
+                <input type="text" name="discount_price" class="input-add" placeholder="Montant de la remise..." value="{{ old('discount_price') }}">
                     @error('discount_price')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

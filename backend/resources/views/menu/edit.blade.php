@@ -6,20 +6,9 @@
 
 @section('content')
 
-
 <div class="main-card">
     <div class="title-header">{{ __('Cuisine Dan Tan Lontan') }}</div>
     <div class="title-page">{{ __('Modification d\'un plat') }}</div>
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <div class="body-card">
 
@@ -37,6 +26,11 @@
                     <option value="Boucherie" {{ $menu->type == 'Boucherie' ? 'selected' : '' }}>Boucherie</option>
                     <option value="Nos sandwichs réunionnais" {{ $menu->type == 'Nos sandwichs réunionnais' ? 'selected' : '' }}>Nos sandwichs réunionnais</option>
                 </select>
+                @error('type')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
         </div>
         
@@ -44,6 +38,11 @@
             <label for="name" class="label-login">{{ __('Nom du plat') }}</label>
             <div>
             <input type="text" name="name" class="input-add" placeholder="Le nom de votre plat..." value="{{$menu->name}}">
+                @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
         </div>
         
@@ -51,6 +50,11 @@
             <label for="price" class="label-login">{{ __('Prix du plat') }}</label>
             <div>
                 <input type="text" name="price" class="input-add" placeholder="Le prix de votre plat..." value="{{$menu->price}}">
+                @error('price')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
         </div>
         
@@ -58,6 +62,11 @@
             <label for="ingredient" class="label-login">{{ __('Ingrédients (optionnel)') }}</label>
             <div>
                 <textarea name="ingredient" cols="41" rows="10" placeholder="Vos ingrédients...">{{$menu->ingredient}}</textarea>
+                    @error('ingredient')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 
@@ -68,6 +77,11 @@
                     <option value="0" {{ $menu->is_discount == 0 ? 'selected' : '' }}>Non</option>
                     <option value="1" {{ $menu->is_discount == 1 ? 'selected' : '' }}>Oui</option>
                 </select>
+                    @error('is_discount')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 
@@ -75,6 +89,11 @@
             <label for="nb_unit" class="label-login">{{ __('Nombre remisé (optionnel)') }}</label>
             <div>
                 <input type="text" name="nb_unit" class="input-add" placeholder="Nombre de produits pour la remise..." value="{{$menu->nb_unit}}">
+                    @error('nb_unit')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 
@@ -82,6 +101,11 @@
             <label for="discount_price" class="label-login">{{ __('Prix de la remise (optionnel)') }}</label>
             <div>
                 <input type="text" name="discount_price" class="input-add" placeholder="Montant de la remise..." value="{{$menu->discount_price}}">
+                    @error('discount_price')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 
