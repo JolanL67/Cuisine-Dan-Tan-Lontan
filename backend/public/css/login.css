@@ -60,7 +60,7 @@
     margin-top: 2rem;
 }
 
-#email, #password, .input-add {
+#email, #password, #password-confirm, .input-add {
     width: 22rem;
     height: 2.5rem;
     font-size: 1.1rem;
@@ -129,7 +129,7 @@
 }
 
 .invalid-feedback {
-    display: flex;
+    display: flex!important;
     justify-content: center;
     color: red;
 }

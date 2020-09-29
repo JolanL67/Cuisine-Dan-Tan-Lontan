@@ -7,6 +7,8 @@
 @section('content')
 
 {{-- A voir pour lundi : 
+    - Traduire l'email de reset password V
+    https://laraveldaily.com/mail-notifications-customize-templates/ V
     - Garder la data dans les input sans erreurs dans les formulaires quand il y a une erreur sur un input
     - Quand on met Non a l'input de remise, ne pas afficher l'input Nombre remisé, et l'input prix de la remise, et les afficher
     quand on met Oui à l'input de remise
@@ -17,7 +19,7 @@
     <div class="title-header">{{ __('Cuisine Dan Tan Lontan') }}</div>
     <div class="title-page">{{ __('Ajout d\'un plat') }}</div>
 
-    @if ($errors->any())
+    {{-- @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -25,7 +27,9 @@
                 @endforeach
             </ul>
         </div>
-    @endif
+    @endif --}}
+
+    {{-- @dump($errors) --}}
 
     <div class="body-card">
 
@@ -43,13 +47,23 @@
                     <option value="Boucherie">Boucherie</option>
                     <option value="Nos sandwichs réunionnais">Nos sandwichs réunionnais</option>
                 </select>
+                @error('type')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
         </div>
         
         <div class="form-group">
             <label for="name" class="label-login">{{ __('Nom du plat') }}</label>
             <div>
-                <input type="text" name="name" class="input-add" placeholder="Le nom de votre plat...">
+                <input type="text" id="name" name="name" class="input-add" placeholder="Le nom de votre plat...">
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
         
@@ -57,6 +71,11 @@
             <label for="price" class="label-login">{{ __('Prix du plat') }}</label>
             <div>
                 <input type="text" name="price" class="input-add" placeholder="Le prix de votre plat...">
+                    @error('price')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
         
@@ -64,6 +83,11 @@
             <label for="ingredient" class="label-login">{{ __('Ingrédients (optionnel)') }}</label>
             <div>
                 <textarea name="ingredient" cols="41" rows="10" placeholder="Vos ingrédients..."></textarea>
+                    @error('ingredient')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 
@@ -74,6 +98,11 @@
                     <option value="0">Non</option>
                     <option value="1">Oui</option>
                 </select>
+                    @error('is_discount')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 
@@ -81,6 +110,11 @@
             <label for="nb_unit" class="label-login">{{ __('Nombre remisé (optionnel)') }}</label>
             <div>
                 <input type="text" name="nb_unit" class="input-add" placeholder="Nombre de produits pour la remise...">
+                    @error('nb_unit')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 
@@ -88,6 +122,11 @@
             <label for="discount_price" class="label-login">{{ __('Prix de la remise (optionnel)') }}</label>
             <div>
                 <input type="text" name="discount_price" class="input-add" placeholder="Montant de la remise...">
+                    @error('discount_price')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
             </div>
         </div>
 

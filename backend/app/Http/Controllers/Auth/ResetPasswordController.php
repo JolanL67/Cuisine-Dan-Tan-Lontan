@@ -27,4 +27,20 @@ class ResetPasswordController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * Get the password reset validation error messages.
+     *
+     * @return array
+     */
+    protected function validationErrorMessages()
+    {
+        return [
+            'email.required' => 'Le champ :attribute est requis.',
+            'email.email' => 'Le champ :attribute doit être une adresse e-mail valide.',
+            'password.required' => 'Le champ :attribute est requis.',
+            'password.confirmed' => 'Le champ de confirmation de :attribute n\'est pas identique au champ de :attribute.',
+            'password.min' => 'Le champ :attribute doit être de :min caractères minimum.',
+        ];
+    }
 }

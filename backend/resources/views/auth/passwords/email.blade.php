@@ -9,7 +9,7 @@
 
     <div class="body-card">
         @if (session('status'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success reset-password" role="alert">
                 {{ session('status') }}
             </div>
         @endif

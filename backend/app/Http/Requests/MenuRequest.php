@@ -27,7 +27,7 @@ class MenuRequest extends FormRequest
             'type' => [
                 'required',
                 'max:255',
-                'in:Plats chaud, Accompagnements, Apéritif Créole, Gâteaux fait Maison, Boucherie, Nos sandwichs réunionnais',
+                'in:Plats chaud,Accompagnements,Apéritif Créole,Gâteaux fait Maison,Boucherie,Nos sandwichs réunionnais',
             ],
             'name' => [
                 'required',

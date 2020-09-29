@@ -28,7 +28,6 @@ class MenuController extends Controller
         $menu->nb_unit = $request->input('nb_unit');
         $menu->discount_price = $request->input('discount_price');
 
-        
         //! ==================
         /*
         if ($request->input('is_discount')) {

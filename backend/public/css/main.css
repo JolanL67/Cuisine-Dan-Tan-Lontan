@@ -6,3 +6,8 @@ body {
 .alert-success {
     text-align: center;
 }
+
+.reset-password {
+    display: inline;
+    font-weight: bold;
+}
