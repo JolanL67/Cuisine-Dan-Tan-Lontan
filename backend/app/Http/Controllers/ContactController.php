@@ -49,11 +49,6 @@ class ContactController extends Controller
      */
     public function update(ContactRequest $request, Contact $contact)
     {
-        // TODO Changer le nom des attributs pour les message d'erreur
-        // https://laraveldaily.com/laravel-validation-specify-attribute-names-for-error-messages/
-        // https://laravel.sillo.org/cours-laravel-5-5-les-bases-la-validation/
-        // https://laravel.com/docs/7.x/validation#customizing-the-validation-attributes
-
         $contactModel = Contact::all()[0];
 
         $phone = $request->input('phone');
