@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Liste des plats')
+
 <link rel="stylesheet" href="css/browse.css">
 
 @include('layouts.nav')

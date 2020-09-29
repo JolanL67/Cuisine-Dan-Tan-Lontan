@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
+@section('title', 'Ajout d\'un plat')
+
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
 @include('layouts.nav')
 
 @section('content')
 
-{{-- A voir pour lundi :
+{{-- Reste à faire :
     - Quand on met Non a l'input de remise, ne pas afficher l'input Nombre remisé, et l'input prix de la remise, et les afficher
     quand on met Oui à l'input de remise
 --}}

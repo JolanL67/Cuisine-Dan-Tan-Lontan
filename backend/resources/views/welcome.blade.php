@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Accueil')
+
 <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
 
 @include('layouts.nav')

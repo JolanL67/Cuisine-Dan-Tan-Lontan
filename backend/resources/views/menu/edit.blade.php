@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Modification d\'un plat')
+
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
 @include('layouts.nav')

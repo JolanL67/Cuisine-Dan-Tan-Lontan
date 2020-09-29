@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Réinitialisation du mot de passe')
+
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
 @section('content')
@@ -36,6 +38,13 @@
                     <button type="submit" class="btn-reset-password">
                         {{ __('Envoyer le lien de réinitialisation du mot de passe') }}
                     </button>
+                </div>
+                <div>
+                <a href="{{ route ('login') }}">
+                        <button type="button" class="btn-login">
+                            {{ __('Se connecter') }}
+                        </button>
+                    </a>
                 </div>
             </div>
         </form>
