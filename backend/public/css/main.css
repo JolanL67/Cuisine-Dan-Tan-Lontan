@@ -6,11 +6,16 @@ body {
     background-attachment: fixed;
 }
 
-.alert-success {
+.success-auth {
     text-align: center;
+    width: 40%;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
 }
 
-.reset-password {
-    display: inline;
-    font-weight: bold;
+.alert-success {
+    text-align: center;
 }

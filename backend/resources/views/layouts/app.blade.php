@@ -46,11 +46,12 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
 <body>
+    @include('layouts.nav')
     <div id="app">
             <div class="container">
                 @include('flash-message')
             </div>
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>

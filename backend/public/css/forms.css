@@ -37,7 +37,13 @@
 
 .body-card {
     position: relative;
-    top: 5rem;
+    top: 3rem;
+    background-color: #00000061;
+    width: 40%!important;
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 2rem 0 1rem 0;
+    margin-bottom: 5rem;
 }
 
 .formAdd {
@@ -126,6 +132,10 @@
     1px 1px 0 #fff,
     1px 1px 10px #141414;
     color:#2b1a1a;
+}
+
+.imgPresentation, .imgDescription {
+    width: 9.5rem;
 }
 
 .invalid-feedback {

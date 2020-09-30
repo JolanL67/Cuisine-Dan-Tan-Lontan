@@ -84,6 +84,6 @@ class PresentationController extends Controller
 
         return redirect()->route('presentation.show', [
             'presentation' => $presentation,
-        ]);
+        ])->with('success', 'La présentation a bien été modifiée !');
     }
 }

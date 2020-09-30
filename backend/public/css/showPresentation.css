@@ -1,0 +1,33 @@
+.table {
+    background-color: #00000061;
+    width: 90%!important;
+    height: 60%;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+td > img {
+    width: 15rem;
+}
+
+td {
+    text-shadow: 4px 4px 5px black;
+    color: white;
+    font-size: 1.1rem;
+    border-top: 2px solid #dee2e6!important;
+    max-width: 60rem;
+    vertical-align: middle!important;
+}
+
+tr {
+    text-align: center;
+}
+
+th {
+    color: white;
+    border-top: none!important;
+}
+
+.modifyLink {
+    font-size: 1.2rem;
+}

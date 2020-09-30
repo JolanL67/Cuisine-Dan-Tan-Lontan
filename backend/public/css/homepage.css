@@ -1,5 +1,10 @@
 .authenticateMessage {
     text-align: center;
+    background-color: #00000061;
+    width: 40%!important;
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
     margin-top: 5rem;
 }
 
@@ -53,3 +58,10 @@
     1px 1px 12px #141414,
     1px 1px 18px #141414;color:#fff;
 }
+
+/* .alert-success {
+    width: 40%;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+} */

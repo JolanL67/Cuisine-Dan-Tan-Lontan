@@ -2,19 +2,21 @@
 
 @section('title', 'Réinitialisation du mot de passe')
 
-<link rel="stylesheet" href="{{ asset('css/login.css') }}">
+<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
 
 @section('content')
 <div class="main-card">
     <div class="title-header">{{ __('Cuisine Dan Tan Lontan') }}</div>
     <div class="title-page">{{ __('Réinitialisation du mot de passe') }}</div>
 
+    @if (session('status'))
+        <div class="alert alert-success alert-block success-auth" role="alert">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {{ session('status') }}
+        </div>
+    @endif
+
     <div class="body-card">
-        @if (session('status'))
-            <div class="alert alert-success reset-password" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
 
         <form method="POST" action="{{ route('password.email') }}">
             @csrf

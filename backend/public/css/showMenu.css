@@ -1,0 +1,36 @@
+.table {
+    background-color: #00000061;
+    width: 90%!important;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+tr {
+    text-align: center;
+}
+
+td {
+    text-shadow: 4px 4px 5px black;
+    color: white;
+    font-size: 1.1rem;
+    border-top: 2px solid #dee2e6!important;
+}
+
+th {
+    color: white;
+    border-top: none!important;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1.5rem!important;
+}
+
+.modifyLink {
+    font-size: 1.2rem;
+}
+
+.formDelete {
+    margin-top: 1rem;
+}

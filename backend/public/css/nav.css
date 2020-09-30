@@ -3,7 +3,8 @@ body {
 }
 
 .navbar-notboostrap {
-    background-color: #0030ff59;
+    background-color: #00000061;
+    margin-bottom: 2rem;
     padding: 1rem;
     display: flex;
     justify-content: space-between;

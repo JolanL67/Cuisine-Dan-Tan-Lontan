@@ -4,10 +4,16 @@
 
 <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
 
-@include('layouts.nav')
-
 @section('content')
-        <div class="flex-center position-ref full-height">
+
+@if (session('status'))
+     <div class="alert alert-success alert-block success-auth" role="alert">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ session('status') }}
+     </div>
+@endif
+
+<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -29,6 +35,5 @@
                     @endauth
                 </div>
             @endif
-                {{-- {{dd(Auth::user())}} --}}
         </div>
 @endsection

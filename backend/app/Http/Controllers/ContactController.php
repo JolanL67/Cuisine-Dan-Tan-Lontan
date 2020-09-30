@@ -69,6 +69,6 @@ class ContactController extends Controller
 
         return redirect()->route('contact.show', [
             'contact' => $contact,
-        ]);
+        ])->with('success', 'Le contact a bien été modifiée !');
     }
 }

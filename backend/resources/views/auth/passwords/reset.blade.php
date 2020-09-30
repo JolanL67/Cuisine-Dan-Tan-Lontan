@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-<link rel="stylesheet" href="{{ asset('css/login.css') }}">
+@section('title', 'Réinitialisation du mot de passe')
+
+<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
 
 @section('content')
 

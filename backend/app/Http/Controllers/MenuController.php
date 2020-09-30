@@ -86,7 +86,7 @@ class MenuController extends Controller
         
         $menu->save();
 
-        return redirect('menu')->with('success', 'Votre plat a bien été modifié');
+        return redirect('menu')->with('success', 'Votre plat a bien été modifié !');
     }
 
     public function delete($menuId)

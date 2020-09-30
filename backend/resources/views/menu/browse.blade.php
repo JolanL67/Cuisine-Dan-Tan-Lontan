@@ -2,9 +2,7 @@
 
 @section('title', 'Liste des plats')
 
-<link rel="stylesheet" href="css/browse.css">
-
-@include('layouts.nav')
+<link rel="stylesheet" href="css/showMenu.css">
 
 @section('content')
 
@@ -40,8 +38,8 @@
             <td>{{$item->discount_price ?? '0'}}€</td>
             <td>{{$item->updated_at ?? 'Non modifié'}}</td>
             <td>
-                <a href="{{ route('menu.edit', ['id' => $item->id]) }}">Modifier</a>
-                <form action="{{ route('menu.delete', ['id' => $item->id]) }}" method="POST">
+                <a class="modifyLink" href="{{ route('menu.edit', ['id' => $item->id]) }}">Modifier</a>
+                <form class="formDelete" action="{{ route('menu.delete', ['id' => $item->id]) }}" method="POST">
                   @csrf
                   @method('delete')
                   <button type="submit" class="btn btn-outline-danger">Supprimer</button>

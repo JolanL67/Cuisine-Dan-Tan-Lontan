@@ -2,9 +2,7 @@
 
 @section('title', 'Modification d\'un plat')
 
-<link rel="stylesheet" href="{{ asset('css/login.css') }}">
-
-@include('layouts.nav')
+<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
 
 @section('content')
 
