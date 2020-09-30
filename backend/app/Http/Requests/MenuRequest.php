@@ -23,6 +23,15 @@ class MenuRequest extends FormRequest
      */
     public function rules()
     {
+
+        $nbUnitRules = isset($_REQUEST['is_discount']) && $_REQUEST['is_discount'] ? [
+            'integer',
+        ] : [];
+
+        $discountPriceRules = isset($_REQUEST['is_discount']) && $_REQUEST['is_discount'] ? [
+            'numeric',
+        ] : [];
+
         return [
             'type' => [
                 'required',
@@ -45,6 +54,9 @@ class MenuRequest extends FormRequest
                 'boolean',
                 'in:0, 1',
             ],
+            'nb_unit' => $nbUnitRules,
+            'discount_price' => $discountPriceRules
+
         ];
     }
 

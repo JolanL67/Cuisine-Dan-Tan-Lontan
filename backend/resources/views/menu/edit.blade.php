@@ -75,7 +75,7 @@
         <div class="form-group">
             <label for="is_discount" class="label-login">{{ __('Remise') }}</label>
             <div>
-                <select name="is_discount" class="input-add">
+                <select id="discount" name="is_discount" class="input-add">
                     <option value="0" {{ $menu->is_discount == 0 ? 'selected' : '' }}>Non</option>
                     <option value="1" {{ $menu->is_discount == 1 ? 'selected' : '' }}>Oui</option>
                 </select>
@@ -87,8 +87,8 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="nb_unit" class="label-login">{{ __('Nombre remisé (optionnel)') }}</label>
+        <div id="unit" class="form-group">
+            <label for="nb_unit" class="label-login">{{ __('Nombre remisé') }}</label>
             <div>
                 <input type="text" name="nb_unit" class="input-add" placeholder="Nombre de produits pour la remise..." value="{{$menu->nb_unit}}">
                     @error('nb_unit')
@@ -99,8 +99,8 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="discount_price" class="label-login">{{ __('Prix de la remise (optionnel)') }}</label>
+        <div id="discountPrice" class="form-group">
+            <label for="discount_price" class="label-login">{{ __('Prix de la remise') }}</label>
             <div>
                 <input type="text" name="discount_price" class="input-add" placeholder="Montant de la remise..." value="{{$menu->discount_price}}">
                     @error('discount_price')
