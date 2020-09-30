@@ -17,7 +17,7 @@ class MenuSeeder extends Seeder
                 'Rougail saucisse' => [
                     'price' => 8.50,
                     'ingredient' => 'Saucisse fraiche, tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -25,7 +25,7 @@ class MenuSeeder extends Seeder
                 'Rougail la morue' => [
                     'price' => 9.50,
                     'ingredient' => 'Morue séchée, tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -33,7 +33,7 @@ class MenuSeeder extends Seeder
                 'Rougail boucané' => [
                     'price' => 9.50,
                     'ingredient' => 'Boucané (viande de porc fumé), tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -41,7 +41,7 @@ class MenuSeeder extends Seeder
                 'Carry poulet' => [
                     'price' => 8.50,
                     'ingredient' => 'Poulet, tomates, oignons, curcuma, épices divers, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -49,7 +49,7 @@ class MenuSeeder extends Seeder
                 'Carry crevette aux combava' => [
                     'price' => 8.50,
                     'ingredient' => 'Crevettes, combava(citron), tomates, oignons, curcuma, épices divers, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -57,7 +57,7 @@ class MenuSeeder extends Seeder
                 'Carry poissons aux gingembres' => [
                     'price' => 8.50,
                     'ingredient' => 'Poisson frais, tomates, oignons, curcuma, gingembre, épices divers, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -65,7 +65,7 @@ class MenuSeeder extends Seeder
                 'Carry poulet massalé' => [
                     'price' => 8.50,
                     'ingredient' => 'Poulet (assaisonné avec massalé), tomates, oignons, curcuma, épices massalé, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -73,7 +73,7 @@ class MenuSeeder extends Seeder
                 'Carry Ti Jacque' => [
                     'price' => 9.50,
                     'ingredient' => 'Ti jaque (fruit typique de la réunion), tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -81,7 +81,7 @@ class MenuSeeder extends Seeder
                 'Carry patte de cochon aux pois' => [
                     'price' => 8.50,
                     'ingredient' => 'Patte de cochon, pois cap, tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -89,7 +89,7 @@ class MenuSeeder extends Seeder
                 'Sauté de boeuf aux oignons' => [
                     'price' => 9.50,
                     'ingredient' => 'Bœuf sauté, tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -97,7 +97,7 @@ class MenuSeeder extends Seeder
                 'Sauté choux vert aux poulets' => [
                     'price' => 8.50,
                     'ingredient' => 'Choux sauté, tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -105,7 +105,7 @@ class MenuSeeder extends Seeder
                 'Sauté poulet aux chouchou' => [
                     'price' => 8.50,
                     'ingredient' => 'Poulet sauté, chouchou (chayote), tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -113,7 +113,7 @@ class MenuSeeder extends Seeder
                 'Sauté de porc aux légumes' => [
                     'price' => 8.50,
                     'ingredient' => 'Porc sauté, légumes croquants, tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -121,7 +121,7 @@ class MenuSeeder extends Seeder
                 'Sauté boeuf aux brèdes chinois' => [
                     'price' => 8.50,
                     'ingredient' => 'Bœuf sauté, brèdes chinoise (variété de choux chinois), tomates, oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -129,7 +129,7 @@ class MenuSeeder extends Seeder
                 'Cabri massalé' => [
                     'price' => 8.50,
                     'ingredient' => 'Viande de cabri, tomates, oignons, épices massalés, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -137,7 +137,7 @@ class MenuSeeder extends Seeder
                 'Massalé le thon' => [
                     'price' => 8.50,
                     'ingredient' => 'Thon, tomates, oignons, épices massalés, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -145,7 +145,7 @@ class MenuSeeder extends Seeder
                 'Riz cantonnais à la réunionnaise' => [
                     'price' => 8.50,
                     'ingredient' => 'Riz, crevettes, œuf, carotte, épices.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -153,7 +153,7 @@ class MenuSeeder extends Seeder
                 'Brède manioc' => [
                     'price' => 8.50,
                     'ingredient' => 'Feuilles de manioc (façon épinard), oignons, épices, accompagnés de riz.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -161,7 +161,7 @@ class MenuSeeder extends Seeder
                 'Shop suey poulet' => [
                     'price' => 8.50,
                     'ingredient' => 'Poulet, sauté de légumes, sauce soja, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -169,7 +169,7 @@ class MenuSeeder extends Seeder
                 'Daube citrouille' => [
                     'price' => 8.50,
                     'ingredient' => 'Citrouille, émincés d’oignons, épices, accompagnés de riz et de haricots ou de lentilles.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -179,7 +179,7 @@ class MenuSeeder extends Seeder
                 'Riz' => [
                     'price' => 0,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -187,7 +187,7 @@ class MenuSeeder extends Seeder
                 'Pois cap' => [
                     'price' => 0,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -195,7 +195,7 @@ class MenuSeeder extends Seeder
                 'Lentilles' => [
                     'price' => 0,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -203,7 +203,7 @@ class MenuSeeder extends Seeder
                 'Haricots rouge' => [
                     'price' => 0,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -211,7 +211,7 @@ class MenuSeeder extends Seeder
                 'Haricots blanc' => [
                     'price' => 0,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -219,7 +219,7 @@ class MenuSeeder extends Seeder
                 'Haricots noir' => [
                     'price' => 0,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -227,7 +227,7 @@ class MenuSeeder extends Seeder
                 'Sauce piment' => [
                     'price' => 0,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -237,7 +237,7 @@ class MenuSeeder extends Seeder
                 'Samoussa au boeuf' => [
                     'price' => 0.60,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.60,
@@ -245,7 +245,7 @@ class MenuSeeder extends Seeder
                 'Samoussa au poulet' => [
                     'price' => 0.60,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.60,
@@ -253,7 +253,7 @@ class MenuSeeder extends Seeder
                 'Samoussa au fromage' => [
                     'price' => 0.60,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.60,
@@ -261,7 +261,7 @@ class MenuSeeder extends Seeder
                 'Bouchon' => [
                     'price' => 0.70,
                     'ingredient' => 'Bouchées de viande, poulet ou porc assaisonnées enveloppées dans une pâte de blé, cuites à la vapeur.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.20,
@@ -269,7 +269,7 @@ class MenuSeeder extends Seeder
                 'Nems au poulet' => [
                     'price' => 0.70,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.20,
@@ -277,7 +277,7 @@ class MenuSeeder extends Seeder
                 'Nems au porc' => [
                     'price' => 0.70,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.20,
@@ -285,7 +285,7 @@ class MenuSeeder extends Seeder
                 'Nems aux crevettes' => [
                     'price' => 0.70,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.20,
@@ -293,7 +293,7 @@ class MenuSeeder extends Seeder
                 'Bonbons piments' => [
                     'price' => 0.60,
                     'ingredient' => 'Beignet fait à base de pois cap et d’un mélange d’herbes et d’épices.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => true,
                     'nb_unit' => 6,
                     'discount_price' => 0.60,
@@ -301,7 +301,7 @@ class MenuSeeder extends Seeder
                 'Croquettes de poulet' => [
                     'price' => 1,
                     'ingredient' => 'Pilons de poulets mariner et cuits et ensuite cuits avec une pâte de beignets.',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -309,7 +309,7 @@ class MenuSeeder extends Seeder
                 'Piments farcis' => [
                     'price' => 1,
                     'ingredient' => 'Gros piments remplie de farce de poulets ou bœufs',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -317,7 +317,7 @@ class MenuSeeder extends Seeder
                 'Achards de légumes (la barquette)' => [
                     'price' => 3,
                     'ingredient' => 'Légumes croquants et colorés pour accompagner un plat ou garnir un sandwich (carotte, haricot verts, choux verts, citron)',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -325,7 +325,7 @@ class MenuSeeder extends Seeder
                 'Sarcive (la barquette)' => [
                     'price' => 3,
                     'ingredient' => 'Viande (porc ou poulet) avec assaisonnement sucré(miel)/salée',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -335,7 +335,7 @@ class MenuSeeder extends Seeder
                 'Gâteaux patate douce (la part)' => [
                     'price' => 2,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -343,7 +343,7 @@ class MenuSeeder extends Seeder
                 'Gâteaux manioc (la part)' => [
                     'price' => 2,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -353,7 +353,7 @@ class MenuSeeder extends Seeder
                 'Boucanée fumée' => [
                     'price' => 13,
                     'ingredient' => 'Poitrine de porc fumée',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -361,7 +361,7 @@ class MenuSeeder extends Seeder
                 'Saucisse fraîche' => [
                     'price' => 10.50,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -369,7 +369,7 @@ class MenuSeeder extends Seeder
                 'Saucisse fumée' => [
                     'price' => 11.50,
                     'ingredient' => null,
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -379,7 +379,7 @@ class MenuSeeder extends Seeder
                 'Pain dakatine' => [
                     'price' => 3,
                     'ingredient' => 'Sandwich a base de beurre de cacahuète',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -387,7 +387,7 @@ class MenuSeeder extends Seeder
                 'Pain achards' => [
                     'price' => 3,
                     'ingredient' => 'Sandwich à base de légumes coloré et croquant',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -395,7 +395,7 @@ class MenuSeeder extends Seeder
                 'Pain avec fromage de tête' => [
                     'price' => 4,
                     'ingredient' => 'Sandwich avec charcuterie fromage de tête (porc)',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -403,7 +403,7 @@ class MenuSeeder extends Seeder
                 'Pain bouchon / ou gratinée' => [
                     'price' => 4.50,
                     'ingredient' => 'Sandwich à base de bouchons (poulet ou porc ou fromage), fromage râpé, gratiné au four',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -411,7 +411,7 @@ class MenuSeeder extends Seeder
                 'Pain thon maïs' => [
                     'price' => 3,
                     'ingredient' => 'Pain, thon, maïs, assaisonnement maison',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -419,7 +419,7 @@ class MenuSeeder extends Seeder
                 'Pain Sarcive' => [
                     'price' => 5.50,
                     'ingredient' => 'Pain à base de viande (porc ou poulet) avec assaisonnement sucré(miel)/salée',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
@@ -427,7 +427,7 @@ class MenuSeeder extends Seeder
                 'Pain Américain' => [
                     'price' => 5,
                     'ingredient' => 'Pain à base de bouchons (poulet ou porc ou fromage) accompagner de frites',
-                    'photo' => 'a remplir !',
+                    'photo' => 'A remplir !',
                     'is_discount' => false,
                     'nb_unit' => 0,
                     'discount_price' => 0,
