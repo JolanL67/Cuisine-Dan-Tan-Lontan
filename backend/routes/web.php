@@ -15,35 +15,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth')->name('home');
-
 Auth::routes([
     'register' => false,
     ]);
 
-Route::get('/menu', 'MenuController@browse')->middleware('auth')->name('menu');
-Route::view('/menu/add', 'menu/add')->middleware('auth');
-Route::post('/menu/add', 'MenuController@add')->middleware('auth')->name('menu.add');
 
-Route::get('/menu/edit/{id}', 'MenuController@edit')->middleware('auth')->name('menu.edit');
-Route::put('/menu/edit/{id}', 'MenuController@update')->middleware('auth')->name('menu.update');
+// Groupe afin d'appliquer le middleware 'auth' sur plusieurs routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
 
-Route::delete('/menu/delete/{id}', 'MenuController@delete')->middleware('auth')->name('menu.delete');
-// https://laravel.com/docs/master/routing#route-model-binding
+    // Route Menu
+    Route::get('/menu', 'MenuController@browse')->name('menu');
+    Route::view('/menu/add', 'menu/add');
+    Route::post('/menu/add', 'MenuController@add')->name('menu.add');
+    Route::get('/menu/edit/{id}', 'MenuController@edit')->name('menu.edit');
+    Route::put('/menu/edit/{id}', 'MenuController@update')->name('menu.update');
+    Route::delete('/menu/delete/{id}', 'MenuController@delete')->name('menu.delete');
 
-// // Authentication Routes...
-// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-// Route::post('login', 'Auth\LoginController@login');
-// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+    // Route Presentation
+    Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
+    Route::get('/presentation/edit', 'PresentationController@edit')->name('presentation.edit');
+    Route::put('/presentation/update', 'PresentationController@update')->name('presentation.update');
 
-// // Registration Routes...
-// Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-// Route::post('register', 'Auth\RegisterController@register');
+    // Route Contact
+    Route::get('/contact', 'ContactController@show')->name('contact.show');
+    Route::get('/contact/edit', 'ContactController@edit')->name('contact.edit');
+    Route::put('/contact/update', 'ContactController@update')->name('contact.update');
 
-// // Password Reset Routes...
-// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-// Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-// Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-// Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+});
+
+
