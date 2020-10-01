@@ -6,6 +6,8 @@
 
 @section('content')
 
+<h1>Contact</h1>
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -23,7 +25,7 @@
         <td>{{ $contact->mail }}</td>
         <td><a href="{{ $contact->facebook }}" target="_blank">{{ $contact->facebook }}</a></td>
         <td><a href="{{ $contact->instagram }}" target="_blank">{{ $contact->instagram }}</a> </td>
-        <td>{{ $contact->updated_at ?? 'Non modifié') }}</td>
+        <td>{{ $contact->updated_at ?? 'Non modifié' }}</td>
         <td>
             <a class="modifyLink" href="{{ route('contact.edit') }}">Modifier</a>
         </td>

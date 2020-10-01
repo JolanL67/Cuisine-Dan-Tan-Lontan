@@ -6,6 +6,8 @@
 
 @section('content')
 
+<h1>Présentation</h1>
+
 <table class="table table-hover">
     <thead>
         <tr>
