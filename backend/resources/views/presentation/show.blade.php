@@ -2,7 +2,7 @@
 
 @section('title', 'Presentation')
 
-<link rel="stylesheet" href="css/showPresentation.css">
+<link rel="stylesheet" href="css/showPresentationContact.css">
 
 @section('content')
 
@@ -29,8 +29,8 @@
         </td>
         <td>{{ $presentation->command_info }}</td>
         <td>{{ $presentation->payment_info }}</td>
-        <td>{{ date('d-m-Y G:i:s', strtotime($presentation->updated_at)) }}</td>
-        <td><a href="{{ route('presentation.edit') }}">Modifier</a></td>
+        <td>{{ $presentation->updated_at ?? 'Non modifié' }}</td>
+        <td><a class="modifyLink" href="{{ route('presentation.edit') }}">Modifier</a></td>
     </tr>
 </tbody>
 </table>
