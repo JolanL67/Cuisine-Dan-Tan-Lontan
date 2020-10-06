@@ -32,7 +32,7 @@
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->type}}</td>
-            <td>{{$item->name}}</td>
+            <td class="itemName">{{$item->name}}</td>
             <td>{{$item->price}}€</td>
             <td>{{$item->ingredient ?? 'Non renseigné'}}</td>
             <td>{{$item->is_discount ? 'Oui' : 'Non'}}</td>
@@ -44,12 +44,33 @@
                 <form class="formDelete" action="{{ route('menu.delete', ['id' => $item->id]) }}" method="POST">
                   @csrf
                   @method('delete')
-                  <button type="submit" class="btn btn-outline-danger">Supprimer</button>
+                  <button type="submit" class="btn btn-outline-danger deleteButton">Supprimer</button>
                 </form>
             </td>
         </tr>
         @endforeach
     </tbody>
 </table>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Supprimer un plat</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            ...
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <button id="confirmDelete" type="button" class="btn btn-danger">Supprimer</button>
+        </div>
+    </div>
+  </div>
+</div>
 
 @endsection

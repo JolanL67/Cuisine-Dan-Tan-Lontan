@@ -40,3 +40,20 @@ h1 {
 .formDelete {
     margin-top: 1rem;
 }
+
+.modal {
+    margin-top: 20em;
+    color: white;
+}
+
+.modal-content {
+    background-color: #000000bf;
+}
+
+.modal-body {
+    background-color: #000000;
+}
+
+.modal-header span {
+    color: white;
+}
