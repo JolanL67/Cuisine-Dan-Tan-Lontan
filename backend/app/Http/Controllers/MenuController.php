@@ -26,10 +26,7 @@ class MenuController extends Controller
         $menu->ingredient = $request->input('ingredient');
         $menu->is_discount = $request->input('is_discount');
         $menu->nb_unit = $request->input('nb_unit');
-        $menu->discount_price = $request->input('discount_price');
 
-        //! ==================
-        /*
         if ($request->input('is_discount')) {
             $menu->is_discount = $request->input('is_discount');
             $menu->nb_unit = $request->input('nb_unit');
@@ -40,8 +37,6 @@ class MenuController extends Controller
             $menu->nb_unit = null;
             $menu->discount_price = null;
         }
-        */
-        //! ==================
 
         $menu->save();
 
@@ -51,7 +46,6 @@ class MenuController extends Controller
     public function edit($id)
     {
         $menu = Menu::find($id);
-        //dd($menu);
 
         return view('menu/edit', [
             'menu' => $menu
@@ -66,11 +60,7 @@ class MenuController extends Controller
         $menu->name = $request->input('name');
         $menu->price = $request->input('price');
         $menu->ingredient = $request->input('ingredient');
-        //$menu->is_discount = $request->input('is_discount');
-        //$menu->nb_unit = $request->input('nb_unit');
-        //$menu->discount_price = $request->input('discount_price');
 
-        //! ====================
         if ($request->input('is_discount')) {
 
             $menu->is_discount = $request->input('is_discount');
@@ -82,8 +72,7 @@ class MenuController extends Controller
             $menu->nb_unit = null;
             $menu->discount_price = null;
         }
-        //! ===============
-        
+
         $menu->save();
 
         return redirect('menu')->with('success', 'Votre plat a bien été modifié !');
@@ -92,7 +81,7 @@ class MenuController extends Controller
     public function delete($menuId)
     {
         $menu = Menu::find($menuId);
-        
+
         $menu->delete();
 
         return redirect()->route('menu')->with('success', 'Votre plat a bien été supprimé !');
