@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Menus from 'src/components/Menus';
-import { addToCart } from 'src/action/cart';
+import { addToCart, substractQuantity } from 'src/action/cart';
 import { getType, getAllMeal, allMealByType } from '../../action/menu';
 import { pushGet } from '../../action/push';
 
@@ -18,6 +18,9 @@ const mapDispatchToProps = (dispatch) => ({
   addToCart: (item) => {
     dispatch(addToCart(item));
   },
+  substractQuantity: (item) => {
+    dispatch(substractQuantity(item));
+  },
   getType: (typeName) => {
     dispatch(getType(typeName));
   },
@@ -26,9 +29,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
   allMealByType: (mealList) => {
     dispatch(allMealByType(mealList));
-  },
-  pushGet: () => {
-    dispatch(pushGet());
   },
 });
 

@@ -5,10 +5,18 @@
   font-size: $fontSizeTextXl;
   font-weight: 500;
 
+  .cart_content_cart,
+  .cart_content_cart_list {
+    font-family: $fontFamilyText;
+    color: rgb(241, 240, 240);
+    text-shadow: 3px 3px 6px black;
+
+
+  }
   .cart_content_cart_list_item{
     margin-bottom: 0.2em;
     font-family: $fontFamilyText;
-    color: rgb(253, 248, 200);
+    color: rgba(252, 238, 36, 0.932);
     text-shadow: 2px 2px 5px black;
   }
 
@@ -23,11 +31,17 @@
     .cart_price {
       margin-top: 2em;
       text-align: center;
+      font-family: $fontFamilyText;
+      color: rgb(241, 240, 240);
+      text-shadow: 3px 3px 6px black;
     }
+    
     .cart_price span{
       margin-top: 2em;
       text-align: center;
-      color: #655fa9bd ;
+      font-family: $fontFamilyText;
+      color: rgba(252, 238, 36, 0.932);
+      text-shadow: 2px 2px 5px black;
     }
 
  }
@@ -39,7 +53,7 @@
 }
 @include xl {
   margin: 2em auto;
-  width: 90%;
+  width: 100%;
   .cart_content {
     display: flex;
     justify-content: space-around;

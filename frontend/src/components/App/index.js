@@ -4,9 +4,9 @@ import React, { useEffect } from 'react';
 // == Import
 import Menus from 'src/containers/Menus';
 import Footer from 'src/containers/Footer';
+import Form from 'src/containers/Form';
 import Header from '../Header';
 import Presentation from '../Presentation';
-import Form from '../Form';
 import Loader from '../Loader';
 
 import './app.scss';

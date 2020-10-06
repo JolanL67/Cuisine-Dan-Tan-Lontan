@@ -14,7 +14,7 @@ const Presentation = ({ presentation }) => {
         </div>
         <div className="cdtl_presentation_description">
           <p>
-              {presentation[0].description}
+            {presentation[0].description}
           </p>
         </div>
       </div>

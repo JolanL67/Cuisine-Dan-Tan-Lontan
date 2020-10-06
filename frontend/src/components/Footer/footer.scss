@@ -54,7 +54,15 @@ padding: 0.1em;
 
 
 .cdtl_footer_copyright{
+    font-family: $fontFamilyText;
     text-align: center;
+    font-weight: 700;
+    color: rgba(16, 30, 150, 0.993);
+
+    & span{
+        color: black;
+        font-size: 1.5em;
+    }
 }
 
 .cdtl_footer_contact{

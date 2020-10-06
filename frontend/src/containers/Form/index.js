@@ -1,27 +1,26 @@
 import { connect } from 'react-redux';
-import Cart from 'src/components/Cart';
-import { removeItem, cartForData } from 'src/action/cart';
+import Form from 'src/components/Form';
+import { pushData } from '../../action/push';
+import { fieldValue } from '../../action/user';
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
-  cart: state.menu.cart,
-  total: state.menu.total,
+
 });
 
 const mapDispatchToProps = (dispatch) => ({
   // nom de la prop à remplir: callback qui contient un appel à dispatch
   // With dispatch we send the action in the reducer
-  removeItem: (item, itemPrice) => {
-    dispatch(removeItem(item, itemPrice));
+  pushData: () => {
+    dispatch(pushData());
   },
 
-  cartForData: (array) => {
-    dispatch(cartForData(array));
+  fieldValue: (newValue, inputName) => {
+    dispatch(fieldValue(newValue, inputName));
   },
-
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Cart);
+)(Form);

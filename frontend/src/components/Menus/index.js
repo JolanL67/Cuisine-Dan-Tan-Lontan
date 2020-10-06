@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import { Menu } from 'semantic-ui-react';
 
 import './menu.scss';
@@ -14,6 +17,7 @@ const Menus = ({
   allMealByType,
   mealTypeList,
   pushGet,
+  substractQuantity,
 }) => {
   useEffect(() => {
     if (typeSelected !== '') {
@@ -26,10 +30,12 @@ const Menus = ({
 
   const handleClickAdd = (e, data) => {
     let addedItem = meals.find((item) => item.name === e.currentTarget.id);
-    let itemPrice = meals.find((item) => item.price === e.currentTarget.price);
-    console.log(addedItem.price);
-    console.log(addedItem);
     addToCart(addedItem);
+  };
+
+  const handleClickSub = (e, data) => {
+    const subtractItem = meals.find((item) => item.name === e.currentTarget.id);
+    substractQuantity(subtractItem);
   };
 
   const handleClickType = (e) => {
@@ -54,12 +60,52 @@ const Menus = ({
         </Menu>
         <div className="cdtl_menu_type_container">
           {mealTypeList.map((plat) => {
+            const found = cart.find(element => element.name === plat.name);
+            let count = 0;
+            for (let i = 0; i < cart.length; ++i) {
+              if (cart[i].name === plat.name) {
+                count++;
+              }
+            }
+            if (found === undefined) {
+              return (
+                <div className="container">
+                  <div className="front">
+                    <div className="inner">
+                      <p>{plat.name}</p>
+                      <span>{plat.price}€</span>
+                    </div>
+                  </div>
+                  <div className="back">
+                    <div className="inner">
+                      <p>{plat.name}</p>
+                      <p>{plat.ingredient}</p>
+                      <p>{plat.price}€</p>
+                      <button onClick={handleClickAdd} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
             return (
-              <div className="cdtl_menu_card">
-                <div className="cdtl_menu_cardLeft">
-                  <h3 className="cdtl_menu_card_title">{plat.name}</h3>
-                  <p className="cdtl_menu_card_ingredients">{plat.ingredient}</p>
-                  <p className="cdtl_menu_card_price">{plat.price}€ <button onClick={handleClickAdd} id={plat.name} className="cdtl_menu_button"><AddShoppingCartIcon className="cdtl_menu_cartIcon" /></button></p>
+              <div className="container">
+                <div className="front">
+                  <div className="inner">
+                    <p>{plat.name}</p>
+                    <span>{plat.price}€</span>
+                  </div>
+                </div>
+                <div className="back">
+                  <div className="inner">
+                    <p>{plat.name}</p>
+                    <p>{plat.ingredient}</p>
+                    <p>{plat.price}€</p>
+                    <div className="card_count">
+                      <button onClick={handleClickSub} id={plat.name} className="cdtl_menu_button"><ExpandMoreIcon className="cdtl_menu_cartIcon" /></button>
+                      <span>{count}</span>
+                      <button onClick={handleClickAdd} id={plat.name} className="cdtl_menu_button"><ExpandLessIcon className="cdtl_menu_cartIcon" /></button>
+                    </div>
+                  </div>
                 </div>
               </div>
             );

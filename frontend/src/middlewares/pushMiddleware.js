@@ -1,20 +1,42 @@
-/* import axios from 'axios';
-import { PUSH_GET } from '../action/push';
+import axios from 'axios';
+import { PUSH_DATA } from '../action/push';
 
 const pushMiddleware = (store) => (next) => (action) => {
+
+  function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+  }
   // console.log('on a intercepté une action dans le middleware: ', action);
   switch (action.type) {
-    case PUSH_GET:
-      axios.get('https://smsapi.free-mobile.fr/sendmsg?user=22824044&pass=DXfwhuR1V22wCx&msg=Salut%20Rose%20!')
+    case PUSH_DATA: {
+      const { name, firstname, phone, adress, mail, message } = store.getState().user;
+      const { shortCart, total } = store.getState().menu;
+      axios({
+        method: 'post',
+        url: 'https://api.cuisinelontan974.fr/api/v1/sendsms',
+        data: {
+          name,
+          firstname,
+          phone,
+          adress,
+          mail,
+          message,
+          shortCart,
+          total,
+        },
+      })
         .then((response) => {
-        // console.log(response.data);
+          console.log(response);
+          // je voudrais enregistrer response.data dans le state => nouvelle action
+          // console.log(response);
         })
         .catch((error) => {
-        // console.warn(error);
+          console.warn(error);
         });
+
       next(action);
       break;
-
+    }
     default:
     // on passe l'action au suivant (middleware suivant ou reducer)
       next(action);
@@ -22,4 +44,3 @@ const pushMiddleware = (store) => (next) => (action) => {
 };
 
 export default pushMiddleware;
- */

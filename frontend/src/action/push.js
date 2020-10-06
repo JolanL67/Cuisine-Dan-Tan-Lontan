@@ -1,5 +1,5 @@
-export const PUSH_GET = 'PUSH_GET';
+export const PUSH_DATA = 'PUSH_DATA';
 
-export const pushGet = () => ({
-  type: PUSH_GET,
+export const pushData = () => ({
+  type: PUSH_DATA,
 });

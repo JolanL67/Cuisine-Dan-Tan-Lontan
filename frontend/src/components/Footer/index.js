@@ -28,7 +28,7 @@ const Footer = ({ contact }) => (
       <a href={contact[0].facebook} target="_blank" rel="noopener noreferrer"><FacebookIcon fontSize="large" /></a>
     </div>
     <div className="cdtl_footer_copyright">
-      <h6>-Copyright un lien vers nos github peut etre-</h6>
+      <h6>Cuisine Dan Tan Lontan 974 <span>&copy;</span> Copyright 2020 - Tous Droits Réservés</h6>
     </div>
   </>
 );

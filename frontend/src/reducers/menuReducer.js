@@ -1,13 +1,14 @@
 import { SAVE_ALL_MEAL, GET_TYPE, ALL_MEAL_BY_TYPE } from '../action/menu';
 import {
   ADD_TO_CART,
+  CART_FOR_DATA,
   REMOVE_ITEM,
   SUBSTRACT_QUANTITY,
-  ADD_QUANTITY,
 } from '../action/cart';
 
 const initialState = {
   meals: [],
+  shortCart: [],
   cart: [],
   total: 0,
   loadingMenu: true,
@@ -30,8 +31,24 @@ const menuReducer = (state = initialState, action = {}) => {
     };
   }
 
+  if (action.type === SAVE_ALL_MEAL) {
+    return {
+      ...state,
+      meals: action.meal,
+      loadingMenu: false,
+    };
+  }
+
+  if (action.type === CART_FOR_DATA) {
+    return {
+      ...state,
+      shortCart: action.array,
+    };
+  }
+
+
   if (action.type === ADD_TO_CART) {
-    let newTotal = +state.total + +action.item.price;
+    const newTotal = +state.total + +action.item.price;
     return {
       ...state,
       cart: [...state.cart, action.item],
@@ -40,53 +57,30 @@ const menuReducer = (state = initialState, action = {}) => {
   }
 
   if (action.type === REMOVE_ITEM) {
-    let new_items = state.cart.filter((item) => action.item.name !== item.name);
-    let newTotal = +state.total - +action.item.price;
+    const numberOfItems = state.cart.filter((item) => action.item === item.name).length;
+    const newItems = state.cart.filter((item) => action.item !== item.name);
+    const newTotal = +state.total - (+action.itemPrice * +numberOfItems);
 
     return {
       ...state,
-      cart: new_items,
-      total: newTotal,
-    };
-  }
-// ============================================= okay jusqu'ici =========================================================
-  if (action.type === ADD_QUANTITY) {
-    let addedItem = state.meals.find(item=> item.id === action.id);
-    addedItem.quantity += 1;
-    let newTotal = state.total + addedItem.price;
-    return {
-      ...state,
+      cart: newItems,
       total: newTotal,
     };
   }
 
   if (action.type === SUBSTRACT_QUANTITY) {
-    let addedItem = state.meals.find(item=> item.id === action.id);
-    if (addedItem.quantity === 1) {
-      let new_items = state.cart.filter(item=>item.id !== action.id);
-      let newTotal = state.total - addedItem.price;
-      return {
-        ...state,
-        cart: new_items,
-        total: newTotal,
-      };
-    } {
-      addedItem.quantity -= 1;
-      let newTotal = state.total - addedItem.price;
-      return {
-        ...state,
-        total: newTotal,
-      };
-    }
-  }
+    const newTotal = +state.total - +action.item.price;
+    const newItems = state.cart.slice(0, state.cart.length);
+    const myItemIndex = newItems.findIndex((item) => action.item.name === item.name);
+    newItems.splice(myItemIndex, 1);
 
-  if (action.type === SAVE_ALL_MEAL) {
     return {
       ...state,
-      meals: action.meal,
-      loadingMenu: false,
+      cart: newItems,
+      total: newTotal,
     };
   }
+
   return state;
 };
 
