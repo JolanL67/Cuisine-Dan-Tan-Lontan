@@ -26,3 +26,6 @@ Route::get('v1/menu', 'Api\V1\MenuController@index');
 
 // Route API pour le contact
 Route::get('v1/contact', 'Api\V1\ContactController@index');
+
+// Route pour l'envoie de sms via l'api free
+Route::post('v1/sendsms', 'Api\V1\SmsController@send');
