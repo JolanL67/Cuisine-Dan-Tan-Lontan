@@ -2,7 +2,9 @@
 
 @section('title', 'Accueil')
 
-<link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+@endsection
 
 @section('content')
 

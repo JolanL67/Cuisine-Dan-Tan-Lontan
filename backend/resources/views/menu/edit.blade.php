@@ -2,7 +2,10 @@
 
 @section('title', 'Modification d\'un plat')
 
-<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@endsection
+
 
 @section('content')
 
@@ -33,7 +36,7 @@
                 @enderror
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="name" class="label-login">{{ __('Nom du plat') }}</label>
             <div>
@@ -45,7 +48,7 @@
                 @enderror
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="price" class="label-login">{{ __('Prix du plat') }}</label>
             <div>
@@ -57,7 +60,7 @@
                 @enderror
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="ingredient" class="label-login">{{ __('Ingrédients (optionnel)') }}</label>
             <div>

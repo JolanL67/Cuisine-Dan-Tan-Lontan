@@ -2,7 +2,10 @@
 
 @section('title', 'Modification de la présentation')
 
-<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@endsection
+
 
 @section('content')
 

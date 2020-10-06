@@ -2,7 +2,9 @@
 
 @section('title', 'Liste des plats')
 
-<link rel="stylesheet" href="css/showMenu.css">
+@section('styles')
+    <link rel="stylesheet" href="css/showMenu.css">
+@endsection
 
 @section('content')
 
@@ -20,7 +22,7 @@
       <th scope="col">Nombre remisé</th>
       <th scope="col">Prix de la remise</th>
       <th scope="col">Modifié le</th>
-    <th scope="col"><a href="{{ route('menu.add') }}"><button type="submit" class="btn btn-success">Ajouter un plat</button></a></th>
+    <th scope="col"><a href="{{ route('menu.add.view') }}"><button type="submit" class="btn btn-success">Ajouter un plat</button></a></th>
     </tr>
   </thead>
   <tbody>

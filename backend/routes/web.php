@@ -28,8 +28,8 @@ Route::middleware(['auth'])->group(function () {
 
     // Route Menu
     Route::get('/menu', 'MenuController@browse')->name('menu');
-    Route::view('/menu/add', 'menu/add');
-    Route::post('/menu/add', 'MenuController@add')->name('menu.add');
+    Route::view('/menu/add', 'menu/add')->name('menu.add.view');
+    Route::post('/menu/add', 'MenuController@add')->name('menu.add.post');
     Route::get('/menu/edit/{id}', 'MenuController@edit')->name('menu.edit');
     Route::put('/menu/edit/{id}', 'MenuController@update')->name('menu.update');
     Route::delete('/menu/delete/{id}', 'MenuController@delete')->name('menu.delete');

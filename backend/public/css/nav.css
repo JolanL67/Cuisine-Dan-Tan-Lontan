@@ -20,6 +20,14 @@ body {
     color: #00ffdcb0;
 }
 
+.navbar-title:hover {
+    color: #00ffdcb0;
+}
+
 .featureLink {
     margin-bottom: -0.8rem;
+}
+
+.active {
+    text-decoration: underline #00ffdcb0;
 }

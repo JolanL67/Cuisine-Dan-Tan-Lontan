@@ -2,7 +2,9 @@
 
 @section('title', 'Contact')
 
-<link rel="stylesheet" href="css/showPresentationContact.css">
+@section('styles')
+    <link rel="stylesheet" href="{{ asset("css/showPresentationContact.css") }}">
+@endsection
 
 @section('content')
 
@@ -23,8 +25,8 @@
     <tr>
         <td>{{ $contact->phone }}</td>
         <td>{{ $contact->mail }}</td>
-        <td><a href="{{ $contact->facebook }}" target="_blank">{{ $contact->facebook }}</a></td>
-        <td><a href="{{ $contact->instagram }}" target="_blank">{{ $contact->instagram }}</a> </td>
+        <td><a class="link" href="{{ $contact->facebook }}" target="_blank">{{ $contact->facebook }}</a></td>
+        <td><a class="link" href="{{ $contact->instagram }}" target="_blank">{{ $contact->instagram }}</a> </td>
         <td>{{ $contact->updated_at ?? 'Non modifié' }}</td>
         <td>
             <a class="modifyLink" href="{{ route('contact.edit') }}">Modifier</a>

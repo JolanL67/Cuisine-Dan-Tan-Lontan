@@ -2,7 +2,9 @@
 
 @section('title', 'Connexion')
 
-<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@endsection
 
 @section('content')
 <div class="main-card">

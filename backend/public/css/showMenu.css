@@ -28,7 +28,13 @@ h1 {
 }
 
 .modifyLink {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: underline white;
+}
+
+.modifyLink:hover {
+    color: #00ffdcb0;
 }
 
 .formDelete {

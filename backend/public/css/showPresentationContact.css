@@ -36,8 +36,23 @@ h1 {
 
 .modifyLink {
     font-size: 1.4rem;
+    color: white;
+    text-decoration: underline white;
+}
+
+.modifyLink:hover {
+    color: #00ffdcb0;
 }
 
 .logo {
     width: 5%;
+}
+
+.link {
+    color: white;
+    text-decoration: underline white;
+}
+
+.link:hover {
+    color: #00ffdcb0;
 }

@@ -2,7 +2,10 @@
 
 @section('title', 'Ajout d\'un plat')
 
-<link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+@endsection
+
 
 @section('content')
 
@@ -12,7 +15,7 @@
 
     <div class="body-card">
 
-    <form action="{{ route('menu.add') }}" method="post" class="formAdd">
+    <form action="{{ route('menu.add.post') }}" method="post" class="formAdd">
         @csrf
         <div class="form-group">
             <label for="type" class="label-login">{{ __('Type de plat') }}</label>
@@ -33,7 +36,7 @@
                 @enderror
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="name" class="label-login">{{ __('Nom du plat') }}</label>
             <div>
@@ -45,7 +48,7 @@
                     @enderror
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="price" class="label-login">{{ __('Prix du plat') }}</label>
             <div>
@@ -57,7 +60,7 @@
                     @enderror
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="ingredient" class="label-login">{{ __('Ingrédients (optionnel)') }}</label>
             <div>

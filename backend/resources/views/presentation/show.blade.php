@@ -2,7 +2,9 @@
 
 @section('title', 'Presentation')
 
-<link rel="stylesheet" href="css/showPresentationContact.css">
+@section('styles')
+    <link rel="stylesheet" href="css/showPresentationContact.css">
+@endsection
 
 @section('content')
 
