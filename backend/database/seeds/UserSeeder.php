@@ -15,11 +15,9 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Rose',
-            'email' => 'jolan.lazzari@gmail.com',
-            // cuisinelontan974@gmail.com
+            'email' => env('ADMIN_MAIL'),
             'email_verified_at' => null,
-            'password' => Hash::make('lol'),
-            // ReunionCuisine137313MK.
+            'password' => Hash::make(env('ADMIN_PASSWORD')),
             'remember_token' => null,
             'created_at' => new \DateTime(),
         ]);
