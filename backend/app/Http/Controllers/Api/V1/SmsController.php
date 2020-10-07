@@ -47,15 +47,15 @@ COMMANDE : {$command}
 
 TOTAL : {$total}";
 
-        /*
+
         $response = Http::post('https://smsapi.free-mobile.fr/sendmsg', [
             'user' => $user,
             'pass' => $pass,
             'msg' => $message,
         ]);
-        */
 
-        $responseStatusCode = 200;
+
+        $responseStatusCode = $response->status();
 
         return SmsStatusCodeProvider::getStatusMessages($responseStatusCode);
     }

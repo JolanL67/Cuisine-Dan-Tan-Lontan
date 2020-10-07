@@ -82,6 +82,6 @@ main nav {
     text-decoration: underline black;
 }
 
-.page-item .disabled {
-    border-color: violet !important;
+.btn-outline-danger {
+    background-color: #dc354521;
 }

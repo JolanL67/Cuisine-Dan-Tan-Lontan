@@ -32,7 +32,7 @@
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->type}}</td>
-            <td class="itemName">{{$item->name}}</td>
+            <td>{{$item->name}}</td>
             <td>{{$item->price}}€</td>
             <td>{{$item->ingredient ?? 'Non renseigné'}}</td>
             <td>{{$item->is_discount ? 'Oui' : 'Non'}}</td>
@@ -44,7 +44,7 @@
                 <form class="formDelete" action="{{ route('menu.delete', ['id' => $item->id]) }}" method="POST">
                   @csrf
                   @method('delete')
-                  <button type="submit" class="btn btn-outline-danger deleteButton">Supprimer</button>
+                  <button type="submit" class="btn btn-outline-danger deleteButton" value="{{ $item->name }}">Supprimer</button>
                 </form>
             </td>
         </tr>
