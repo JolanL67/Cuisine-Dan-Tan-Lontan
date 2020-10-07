@@ -9,7 +9,7 @@ class MenuController extends Controller
 {
     public function browse()
     {
-        $menu = Menu::all();
+        $menu = Menu::paginate(10);
 
         return view('menu/browse', [
             'menu' => $menu

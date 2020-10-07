@@ -26,9 +26,9 @@
     <body>
         @include('layouts.nav')
         <div id="app">
-                <div class="container">
-                    @include('flash-message')
-                </div>
+            <div class="container">
+                @include('flash-message')
+            </div>
             <main>
                 @yield('content')
             </main>

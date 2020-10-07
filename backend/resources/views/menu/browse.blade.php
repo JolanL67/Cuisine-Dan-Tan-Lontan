@@ -52,6 +52,8 @@
     </tbody>
 </table>
 
+{{ $menu->links() }}
+
 <!-- Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

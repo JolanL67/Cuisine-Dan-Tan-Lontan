@@ -57,3 +57,31 @@ h1 {
 .modal-header span {
     color: white;
 }
+
+main nav {
+    margin-left: 45%;
+}
+
+.page-link {
+    background-color: #00000061;
+    color: white;
+    text-shadow: 4px 4px 5px black;
+}
+
+.page-item.active .page-link {
+    background-color: white;
+    color: black;
+    text-decoration: underline black;
+    text-shadow: none;
+    border-color: black;
+}
+
+.page-link:hover {
+    color: black;
+    background-color: white;
+    text-decoration: underline black;
+}
+
+.page-item .disabled {
+    border-color: violet !important;
+}
