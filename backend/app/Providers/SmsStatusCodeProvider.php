@@ -28,17 +28,16 @@ class SmsStatusCodeProvider extends ServiceProvider
         foreach( self::STATUS_CODE as $index => $statusCode) {
 
             if ( $statusCode == $responseStatusCode) {
-                return [
+                return response([
                     "status" => $statusCode,
                     "message" => self::STATUS_CODES_MESSAGES[$index]
-                ];
+                ], $statusCode);
             }
-
         }
 
-        return [
+        return response([
             "status" => 500,
             "message" => "Un code de statut inconnu du serveur à été envoyé par l'api de free"
-        ];
+        ], 500);
     }
 }

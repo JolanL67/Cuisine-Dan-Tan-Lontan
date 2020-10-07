@@ -15,6 +15,16 @@ class SmsController extends Controller
         $pass = env("FREE_PASS");
         $data = $req->json()->all();
 
+        foreach ($data as $item) {
+            if ($item == null || empty($item)) {
+
+                return response([
+                    "status" => 400,
+                    "message" => "Tout les champ n'ont pas été renseignés !"
+                ], 400);
+            };
+        }
+
         $firstName = $data['firstName'];
         $name = $data['name'];
         $adress = $data['adress'];
@@ -46,7 +56,6 @@ MESSAGE : {$smsMessage}
 COMMANDE : {$command}
 
 TOTAL : {$total}";
-
 
         $response = Http::post('https://smsapi.free-mobile.fr/sendmsg', [
             'user' => $user,
