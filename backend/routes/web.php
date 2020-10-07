@@ -22,9 +22,9 @@ Auth::routes([
 
 // Groupe afin d'appliquer le middleware 'auth' sur plusieurs routes
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('home');
+
+    // Route Home
+    Route::get('/', 'Controller@home')->name('home');
 
     // Route Menu
     Route::get('/menu', 'MenuController@browse')->name('menu');
