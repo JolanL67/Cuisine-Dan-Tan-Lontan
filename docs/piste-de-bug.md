@@ -1,0 +1,1 @@
+- Le header X-RateLimit-Limit pour les routes => https://mattstauffer.com/blog/api-rate-limiting-in-laravel-5-2/
