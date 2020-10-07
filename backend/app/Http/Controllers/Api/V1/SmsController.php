@@ -15,6 +15,13 @@ class SmsController extends Controller
         $pass = env("FREE_PASS");
         $data = $req->json()->all();
 
+        if ($data == null || empty($data)) {
+            return response([
+                "status" => 400,
+                "message" => "Aucune données présente dans la requête !"
+            ], 400);
+        }
+
         foreach ($data as $item) {
             if ($item == null || empty($item)) {
 
