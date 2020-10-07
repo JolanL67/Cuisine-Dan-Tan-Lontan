@@ -20,7 +20,7 @@ class SmsController extends Controller
 
                 return response([
                     "status" => 400,
-                    "message" => "Tout les champ n'ont pas été renseignés !"
+                    "message" => "Tout les champs n'ont pas été renseignés !"
                 ], 400);
             };
         }
