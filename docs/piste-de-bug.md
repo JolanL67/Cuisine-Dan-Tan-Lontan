@@ -1,4 +1,4 @@
-- Le header X-RateLimit-Limit pour les routes 
+- Le header X-RateLimit-Limit pour les routes ( quand la limite est atteinte il lance une 429 Too Many Requests)
   => piste : https://mattstauffer.com/blog/api-rate-limiting-in-laravel-5-2/
 
 - Erreur CSP ( Avec firefox uniquement sur les pages /api/v1/*) 
