@@ -1,0 +1,123 @@
+@import 'src/styles/vars';
+@import "~bootstrap/scss/bootstrap";
+
+
+.navbar{
+    background: linear-gradient(180deg,rgba(0,0,0,.61961),hsl(0deg 10% 71% / 81%) 52%,rgb(0 0 0 / 17%));
+    border-left: 2.5px outset #dcdcdc;
+    border-right: 2.5px outset #dcdcdc;
+    border-bottom: 2.5px outset #dcdcdc;
+    background-color: rgba(244,171,137,.281);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+.navbar-nav{
+    text-align: center;
+    width: 100%;
+    margin: 0.3em;
+}
+.navbar-toggler{
+    border: 0.1em solid white!important;
+    background-color: lightcyan;
+}
+.cdtl_navLink{
+    color: white!important;
+    font-family: 'Lobster Two', cursive; 
+    font-size: 1.6em;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.cdtl_navLink:hover{
+    transform: scale(1.2);
+}
+
+@include phone {
+    .navbar{
+        background: linear-gradient(180deg,rgba(0,0,0,.61961),hsl(0deg 10% 71% / 81%) 52%,rgb(0 0 0 / 50%));
+        border-left: 1.5px outset #dcdcdc;
+        border-right: 1.5px outset #dcdcdc;
+        border-bottom: 1.5px outset #dcdcdc;
+        background-color: rgba(244, 171, 137, 0.418);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        line-height: 1.2em;
+    }
+    .navbar-nav{
+        text-align: center;
+        width: 100%;
+    }
+    .navbar-toggler{
+        border: 0.1em solid white!important;
+        background-color: lightcyan;
+    }
+    .cdtl_navLink{
+        font-family: Lobster Two,cursive;
+        color: ghostwhite;
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363;
+        font-size: 1.6em;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@include md{
+    .navbar{
+        background: linear-gradient(180deg,rgba(0,0,0,.61961),hsl(0deg 10% 71% / 81%) 52%,rgb(0 0 0 / 50%));
+        border-left: 1.5px outset #dcdcdc;
+        border-right: 1.5px outset #dcdcdc;
+        border-bottom: 1.5px outset #dcdcdc;
+        background-color: rgba(244, 171, 137, 0.418);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        line-height: 1.4em;
+    }
+    .navbar-nav{
+        text-align: center;
+        width: 100%;
+    }
+    .navbar-toggler{
+        border: 0.1em solid white!important;
+        background-color: lightcyan;
+    }
+    .cdtl_navLink{
+        font-family: Lobster Two,cursive;
+        color: ghostwhite;
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363;
+        font-size: 1.6em;
+        width: 80%;
+        margin: 0 auto;
+        font-weight: 600;
+    }
+}
+
+
+@include xl{
+    .navbar{
+        background: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        background-color: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        line-height: 1em;
+    }
+  
+    .cdtl_navLink{
+        font-family: Lobster Two,cursive;
+        color: ghostwhite;
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363; 
+        font-size: 2.5em;
+        width: 80%;
+        margin: 1em 0 0 2em;
+    }
+}
+

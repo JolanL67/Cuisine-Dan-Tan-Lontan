@@ -1,0 +1,91 @@
+// Phone device 
+$screen-phone-min: 315px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+ 
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+ 
+// Tablets and small desktops
+$screen-lg-min: 992px;
+ 
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+$fontFamilyMainTitle: niconne, cursive;
+$fontFamilySecondTitle: 'Cormorant', serif;
+$fontFamilyText:  Lobster Two, cursive;
+
+$fontWeightTitle : 500;
+
+$spaceAroundTitle : 0.6em;
+
+$fontSizeTitleXl: 5em;
+$fontSizeTitleMd: 3em;
+$fontSizeTitlePhone: 2em;
+
+$fontSizeTextXl: 1.5em;
+$fontSizeTextMd: 1.5em;
+$fontSizeTextPhone: 1.5em;
+
+$textShadowTitle: 
+1px 1px 1px rgba(0, 0, 0, 0.5), 
+1px 2px 1px rgba(0, 0, 0, 0.5), 
+1px 3px 1px rgba(0, 0, 0, 0.5), 
+1px 4px 1px rgba(0, 0, 0, 0.5), 
+1px 5px 1px rgba(0, 0, 0, 0.5), 
+1px 6px 1px rgba(0, 0, 0, 0.5), 
+1px 7px 1px rgba(0, 0, 0, 0.5), 
+1px 8px 1px rgba(0, 0, 0, 0.5), 
+1px 9px 1px rgba(0, 0, 0, 0.5), 
+1px -3px 1px rgba(0, 0, 0, 0.5), 
+1px 16px 6px rgba(0, 0, 0, 0.445), 1px 22px 10px rgb(16 16 16 / 5%), 1px 25px 35px rgb(16 16 16 / 15%);
+
+$colorMainTitle : #ffffffed;
+$colorSecondTitle : rgb(212, 209, 209);
+$colorText:#dbdd77ed;
+
+$bgBox: #fff2f2;
+
+
+
+
+// responsive design
+@mixin phone {
+  @media (min-width: #{$screen-phone-min}) {
+    @content;
+}
+}
+@mixin sm {
+   @media (min-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+ 
+// Medium devices
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+ 
+// Large devices
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+ 
+// Extra large devices
+@mixin xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+ 
+// Custom devices
+@mixin rwd($screen) {
+   @media (min-width: $screen+'px' ) {
+      @content;
+   }
+}

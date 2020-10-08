@@ -1,0 +1,108 @@
+@import 'src/styles/vars';
+
+.cdtl_homepage_text{
+    padding-top: 1em;
+    width: 95%;
+    margin: 0 auto;
+    font-family: niconne, cursive;
+    font-size: 2em;
+    font-weight: 500;
+    color: #ff0b0b;
+    text-shadow: 1px 1px 1px #000000, 1px 2px 1px #000000, 1px 3px 1px #000000, 1px 4px 1px #000000, 1px 5px 1px #000000, 1px 6px 1px #000000, 1px 7px 1px #000000, 1px 8px 1px #484848, 1px 9px 1px #fff1f1, 1px 10px 1px #fff1f1, 1px 18px 6px rgb(16 16 16), 1px 22px 10px rgba(16,16,16,.69), 1px 25px 35px rgba(16,16,16,.66), 1px 30px 60px rgba(16,16,16,.23);
+}
+
+.cdtl_homepage_title {
+    padding-top: 1em;
+    text-align: center;
+}
+
+.cdtl_homepage_para{
+    position: absolute;
+    top: 38%;
+    left: 2%;
+    color: white;
+    font-size: 2.5em;
+    font-style: italic;
+    font-family: Lobster Two,cursive;
+    text-shadow: 2px 2px 3px black;
+}
+
+@include phone {
+
+    .cdtl_homepage_text{
+        padding-top: 1.3em;
+        width: 95%;
+        margin: 0 auto;
+        font-family: niconne, cursive;
+        font-size: 4em;
+        font-weight: 500;
+        color: #efeda8;
+        text-shadow: 1px 1px 1px #919191,
+         1px 2px 1px #919191,
+         1px 3px 1px #919191,
+         1px 4px 1px #919191,
+         1px 5px 1px #919191,
+         1px 6px 1px #919191,
+         1px 7px 1px #919191,
+         1px 8px 1px #919191,
+         1px 9px 1px #fff1f1,
+         1px 10px 1px #fff1f1,
+         1px 18px 6px rgba(16,16,16,.2),
+         1px 22px 10px rgb(16 16 16 / 35%),
+         1px 25px 35px rgb(16 16 16 / 0%),
+         1px 30px 60px rgb(16 16 16 / 0%);
+            position: none;
+    }
+  .cdtl_homepage_title {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: none;
+}
+}
+
+@include md{
+    .cdtl_homepage_text{
+        width: 95%;
+        margin: 0 auto;
+        font-family: niconne, cursive;
+        font-size: 5em;
+        font-weight: 500;
+        color: #ff0b0b;
+        text-shadow: 1px 1px 1px #000000, 1px 2px 1px #000000, 1px 3px 1px #000000, 1px 4px 1px #000000, 1px 5px 1px #000000, 1px 6px 1px #000000, 1px 7px 1px #000000, 1px 8px 1px #484848, 1px 9px 1px #fff1f1, 1px 10px 1px #fff1f1, 1px 18px 6px rgb(16 16 16), 1px 22px 10px rgba(16,16,16,.69), 1px 25px 35px rgba(16,16,16,.66), 1px 30px 60px rgba(16,16,16,.23);
+        top: 20%;
+        position: absolute;
+    }
+
+    .cdtl_homepage_title {
+        background-image: url('../../../assets/image/main.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        padding-top: 1em;
+    }
+}
+
+@include xl{
+    .cdtl_homepage_text{
+        width: 95%;
+        margin: 0 auto;
+        font-family: niconne, cursive;
+        font-size: 6em;
+        font-weight: 500;
+        color: #ff0b0b;
+        text-shadow: 1px 1px 1px #000000, 1px 2px 1px #000000, 1px 3px 1px #000000, 1px 4px 1px #000000, 1px 5px 1px #000000, 1px 6px 1px #000000, 1px 7px 1px #000000, 1px 8px 1px #484848, 1px 9px 1px #fff1f1, 1px 10px 1px #fff1f1, 1px 18px 6px rgb(16 16 16), 1px 22px 10px rgba(16,16,16,.69), 1px 25px 35px rgba(16,16,16,.66), 1px 30px 60px rgba(16,16,16,.23);
+        position: absolute;
+        right: 30%;
+        top: 10%;
+
+    }
+    .cdtl_homepage_title {
+        background-image: url('../../../assets/image/main.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        box-shadow: 0px 0px 25px 13px #000;
+    }
+}
