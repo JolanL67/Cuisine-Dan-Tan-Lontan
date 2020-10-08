@@ -20,20 +20,19 @@ Technology used
 Team
 --------------------
 
-4 developpers ( 2 react, 2 symfony)
+3 developpers ( 1 react, 2 Laravel)
 
-Symfony
+Laravel
 - [Jolan](https://github.com/JolanL67)
 - [Karim](https://github.com/Kanyashiu)
 
 React
 - [Antony](https://github.com/Tony-Gmz)
-- [Thibault](https://github.com/Poulpy75)
 
 Website
 --------------------
 
-https://XXXXXXXXXXXXXX
+https://cuisinedantan974.fr
 
 Deployed on XXXXXXXXXXXXXX
 

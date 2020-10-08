@@ -5,7 +5,13 @@ import { fieldValue } from '../../action/user';
 
 const mapStateToProps = (state) => ({
   // nom de la prop à remplir: donnée à récupérer dans le state
-
+  cart: state.menu.cart,
+  name: state.user.name,
+  firstName: state.user.firstName,
+  phone: state.user.phone,
+  mail: state.user.mail,
+  adress: state.user.adress,
+  message: state.user.message,
 });
 
 const mapDispatchToProps = (dispatch) => ({

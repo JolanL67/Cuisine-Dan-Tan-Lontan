@@ -3,6 +3,12 @@ export const REMOVE_ITEM = 'REMOVE_ITEM';
 export const SUBSTRACT_QUANTITY = 'SUBSTRACT_QUANTITY';
 export const CART_FOR_DATA = 'CART_FOR_DATA';
 
+export const PRICE_LESS_DISCOUNT = 'PRICE_LESS_DISCOUNT';
+
+export const priceLessDiscount = (discount) => ({
+  type: PRICE_LESS_DISCOUNT,
+  discount,
+});
 
 export const cartForData = (array) => ({
   type: CART_FOR_DATA,

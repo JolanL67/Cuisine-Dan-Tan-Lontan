@@ -9,19 +9,19 @@ const pushMiddleware = (store) => (next) => (action) => {
   // console.log('on a intercepté une action dans le middleware: ', action);
   switch (action.type) {
     case PUSH_DATA: {
-      const { name, firstname, phone, adress, mail, message } = store.getState().user;
+      const { name, firstName, phone, adress, mail, message } = store.getState().user;
       const { shortCart, total } = store.getState().menu;
       axios({
         method: 'post',
         url: 'https://api.cuisinelontan974.fr/api/v1/sendsms',
         data: {
+          shortCart,
           name,
-          firstname,
+          firstName,
           phone,
           adress,
           mail,
           message,
-          shortCart,
           total,
         },
       })
@@ -32,6 +32,7 @@ const pushMiddleware = (store) => (next) => (action) => {
         })
         .catch((error) => {
           console.warn(error);
+          console.log(error.data);
         });
 
       next(action);

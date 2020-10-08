@@ -2,7 +2,7 @@ import { FIELD_VALUE } from '../action/user';
 
 const initialState = {
   name: '',
-  firstname: '',
+  firstName: '',
   phone: '',
   mail: '',
   adress: '',

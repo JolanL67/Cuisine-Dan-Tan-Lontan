@@ -7,7 +7,7 @@ const menuMiddleware = (store) => (next) => (action) => {
     case GET_ALL_MEAL:
       axios.get('https://api.cuisinelontan974.fr/api/v1/menu')
         .then((response) => {
-          // console.log(response);
+          console.log(response.data);
           // je voudrais enregistrer response.data dans le state => nouvelle action
           // console.log(response);
           store.dispatch(saveAllMeal(response.data));

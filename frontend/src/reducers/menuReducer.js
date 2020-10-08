@@ -2,6 +2,7 @@ import { SAVE_ALL_MEAL, GET_TYPE, ALL_MEAL_BY_TYPE } from '../action/menu';
 import {
   ADD_TO_CART,
   CART_FOR_DATA,
+  PRICE_LESS_DISCOUNT,
   REMOVE_ITEM,
   SUBSTRACT_QUANTITY,
 } from '../action/cart';
@@ -46,6 +47,15 @@ const menuReducer = (state = initialState, action = {}) => {
     };
   }
 
+<<<<<<< HEAD
+=======
+  if (action.type === PRICE_LESS_DISCOUNT) {
+    return {
+      ...state,
+      total: action.discount,
+    };
+  }
+>>>>>>> master
 
   if (action.type === ADD_TO_CART) {
     const newTotal = +state.total + +action.item.price;

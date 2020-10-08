@@ -3,7 +3,11 @@ import './form.scss';
 import Cart from 'src/containers/Cart';
 
 
+<<<<<<< HEAD
 const Form = ({ pushData, fieldValue }) => {
+=======
+const Form = ({ pushData, fieldValue, name, firstName, phone, adress, mail, message, cart }) => {
+>>>>>>> master
 
   const handleClickGet = (event) => {
     event.preventDefault();
@@ -15,6 +19,11 @@ const Form = ({ pushData, fieldValue }) => {
     fieldValue(e.target.value, e.target.name);
   };
 
+<<<<<<< HEAD
+=======
+  const isEnable = name !== '' && firstName !== '' && mail !== '' && phone !== '' && adress !== '' && message !== '' && cart.length !== 0;
+
+>>>>>>> master
   return (
 
     <div className="contact">
@@ -33,7 +42,7 @@ const Form = ({ pushData, fieldValue }) => {
             <div className="contact_form_items">
               <div className="contact_form_items_split">
                 <input onChange={handleChangeInput} name="name" type="text" className="contact_form_item_split" placeholder="Nom*" />
-                <input onChange={handleChangeInput} name="firstname" type="text" className="contact_form_item_split" placeholder="Prénom*" />
+                <input onChange={handleChangeInput} name="firstName" type="text" className="contact_form_item_split" placeholder="Prénom*" />
               </div>
               <div className="contact_form_items_split">
                 <input onChange={handleChangeInput} name="phone" type="text" className="contact_form_item_split" placeholder="Téléphone*" />
@@ -42,7 +51,7 @@ const Form = ({ pushData, fieldValue }) => {
               <input onChange={handleChangeInput} name="adress" type="text" className="contact_form_item" placeholder="Adresse*" />
               <textarea onChange={handleChangeInput} name="message" className="contact_form_item" cols="30" rows="10" placeholder="Description*" />
             </div>
-            <button className="contact_button" type="submit">Commander</button>
+            <button disabled={!isEnable} className="contact_button" type="submit">Commander</button>
           </form>
         </div>
         <div className="cart_container">
