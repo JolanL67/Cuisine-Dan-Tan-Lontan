@@ -14,14 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route API pour la presentation
-Route::get('v1/presentation', 'Api\V1\PresentationController@index');
 
-// Route API pour le menu
-Route::get('v1/menu', 'Api\V1\MenuController@index');
+// Groupe afin d'appliquer le middleware 'cache.header' sur plusieurs routes
+Route::middleware(['cache.headers:private;max_age=3600'])->group(function () {
 
-// Route API pour le contact
-Route::get('v1/contact', 'Api\V1\ContactController@index');
+    // Route API pour la presentation
+    Route::get('v1/presentation', 'Api\V1\PresentationController@index');
+
+    // Route API pour le menu
+    Route::get('v1/menu', 'Api\V1\MenuController@index');
+
+    // Route API pour le contact
+    Route::get('v1/contact', 'Api\V1\ContactController@index');
+
+});
 
 // Route pour l'envoie de sms via l'api free
 Route::post('v1/sendsms', 'Api\V1\SmsController@send');
