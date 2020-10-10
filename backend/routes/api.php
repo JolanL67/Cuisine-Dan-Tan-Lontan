@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Groupe afin d'appliquer le middleware 'cache.header' sur plusieurs routes
-Route::middleware(['cache.headers:private;max_age=3600'])->group(function () {
+Route::middleware(['cache.headers:private;max_age=3600', 'api.auth'])->group(function () {
 
     // Route API pour la presentation
     Route::get('v1/presentation', 'Api\V1\PresentationController@index');
