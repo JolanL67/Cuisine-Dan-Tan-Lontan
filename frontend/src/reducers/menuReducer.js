@@ -6,6 +6,7 @@ import {
   REMOVE_ITEM,
   SUBSTRACT_QUANTITY,
 } from '../action/cart';
+import { CLEAN_DATA } from '../action/push';
 
 const initialState = {
   meals: [],
@@ -18,6 +19,16 @@ const initialState = {
 };
 
 const menuReducer = (state = initialState, action = {}) => {
+
+  if (action.type === CLEAN_DATA) {
+    return {
+      ...state,
+      cart: [],
+      total: 0,
+      shortCart: [],
+    };
+  }
+
   if (action.type === ALL_MEAL_BY_TYPE) {
     return {
       ...state,
@@ -47,22 +58,17 @@ const menuReducer = (state = initialState, action = {}) => {
     };
   }
 
-<<<<<<< HEAD
-=======
   if (action.type === PRICE_LESS_DISCOUNT) {
     return {
       ...state,
-      total: action.discount,
+      total: +action.discount,
     };
   }
->>>>>>> master
 
   if (action.type === ADD_TO_CART) {
-    const newTotal = +state.total + +action.item.price;
     return {
       ...state,
       cart: [...state.cart, action.item],
-      total: newTotal,
     };
   }
 

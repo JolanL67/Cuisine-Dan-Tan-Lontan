@@ -1,81 +1,136 @@
 @import 'src/styles/vars';
 
 .contact {
-
-    margin: 1em auto;
     line-height: 1.5em;
-
-  @include phone {
     display: flex;
     flex-direction: column;
-    .contact_title {
-      text-align: center;
-      font-family: $fontFamilyMainTitle;
-      font-size: $fontSizeTitlePhone;
-      font-weight: $fontWeightTitle;
-      color: $colorMainTitle;
-      text-shadow: $textShadowTitle;
-      padding-top: $spaceAroundTitle ;
+  
+  .contact_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: 1em;
+    box-shadow: (2px 3px 4px 1px black);
+  }
 
-    }
-    .contact_info {
-      text-align: center;
-      font-style: italic;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .contact_form {
-      font-family: $fontFamilyText;
-      margin: auto;
-    }
+  .contact_title {
+    text-align: center;
+    font-family: $fontFamilyMainTitle;
+    font-size: $fontSizeTitlePhone;
+    font-weight: $fontWeightTitle;
+    color: $colorMainTitle;
+    text-shadow: $textShadowTitle;
+    padding-top: $spaceAroundTitle ;
 
-    .contact_description {
-      text-align: center;
-      margin-top: 1rem;
-      .contact_description_text{
-        width: 94%;
-        border-radius: 10px;
-        border: 2px grey solid;
-        padding-left: 1.2rem;
+  }
+
+  .contact_information{
+    font-size: 1em;
+    font-family: $fontFamilyText;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
+    width: 100%;
+    text-align: justify;
+    position: relative;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+  }
+
+  .contact_rule {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+    font-family: $fontFamilyText;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
+  }
+
+  .form_container{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact_form {
+    font-family: $fontFamilyText;
+    width: 100%;
+
+    .contact_form_items_split{
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+      .contact_form_item_split{
+        font-size: 1em;
+        width: 49%;
+        margin: 0.2em;
+        border-radius: 0.5em;
+        background-color: rgba(255, 255, 255, 0.34);
+        padding: 0.1em;
+        box-shadow: (2px 3px 4px 1px rgba(0, 0, 0, 0.5));
+
+        &::placeholder{
+          color: rgba(255, 255, 255, 0.87);
+          text-shadow: 2px 2px 3px black;
+        }
       }
     }
-    .contact_button {
-      background-color: #fcf0f0;
-      font-family: $fontFamilyText;
-      font-size: 1.6em;
-      width: 80%;
-      height: 1.5em;
-      border-radius: 0.5em;
-      display: block;
-      margin: 1em auto;
-      box-shadow: 6px 7px 8px #0000003b;
-    }
-    .contact_hour {
-      margin-top: 1rem;
+
+    .contact_form_items{
       display: flex;
       flex-direction: column;
+
+      .contact_form_item{
+        font-size: 1em;
+        width: 100%;
+        margin: 0.4em auto;
+        border-radius: 0.5em;
+        background-color: rgba(255, 255, 255, 0.34);
+        padding: 0.1em;
+        box-shadow: (2px 3px 4px 1px rgba(0, 0, 0, 0.5));
+
+        &::placeholder{
+          color: rgba(255, 255, 255, 0.87);
+          text-shadow: 2px 2px 3px black;
+        }
+      }
     }
+  }
+
+  .cart_container{
+    text-align: center;
+    align-self: center;
+    width: 100%;
+  }
+
+  .contact_button {
+    background-color: rgb(234, 245, 255);
+    font-family: $fontFamilyText;
+    font-size: 1.4em;
+    width: 50%;
+    height: 1.5em;
+    border-radius: 0.5em;
+    display: block;
+    margin: 2rem auto;
+    border: rgba(0, 0, 0, 0.651) inset 3.5px;
+    border-top: rgba(0, 0, 0, 0.301) inset 3.5px;
+    border-left: rgba(0, 0, 0, 0.308) inset 3.5px;
+    box-shadow: 6px 5px  10px 5px #0000007c;
+  }
+
+
+  @include phone {
+
     
  }
 
   @include md {
 
-    .contact_title{
-      text-align: center;
-      font-family: $fontFamilyMainTitle;
-      font-size: $fontSizeTitleXl;
-      font-weight: $fontWeightTitle;
-      color: $colorMainTitle;
-      text-shadow: $textShadowTitle;
-      padding-top: $spaceAroundTitle ;
-    }
-
-    .contact_form{
-      font-family: $fontFamilyText;
-      width: 80%;
-      margin: 0 auto;
-    }
 }
+
 @include xl {
 
   display: flex;
@@ -91,6 +146,7 @@
     border-radius: 1em;
     box-shadow: (2px 3px 4px 1px black);
   }
+
   .contact_title {
     text-align: center;
     font-family: $fontFamilyMainTitle;
@@ -113,6 +169,7 @@
     left: 35%;
     margin-bottom: 2em;
   }
+
   .contact_rule {
     text-align: center;
     font-style: italic;
@@ -127,6 +184,7 @@
     width: 60%;
     margin-left: 1.5em;
   }
+
   .contact_form {
     font-family: $fontFamilyText;
     width: 80%;
@@ -177,8 +235,7 @@
     align-self: center;
     width: 33%;
   }
-
-  }
+  
   .contact_button {
     background-color: rgb(234, 245, 255);
     font-family: $fontFamilyText;
@@ -199,5 +256,6 @@
     flex-direction: column;
   }
 
+}
 
 }

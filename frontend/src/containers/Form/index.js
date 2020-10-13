@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Form from 'src/components/Form';
-import { pushData } from '../../action/push';
+import { closeErrorMessage, closeSuccesMessage, pushData } from '../../action/push';
 import { fieldValue } from '../../action/user';
 
 const mapStateToProps = (state) => ({
@@ -12,6 +12,8 @@ const mapStateToProps = (state) => ({
   mail: state.user.mail,
   adress: state.user.adress,
   message: state.user.message,
+  snackSuccesMessage: state.user.snackSuccesMessage,
+  snackErrorMessage: state.user.snackErrorMessage,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -24,6 +26,15 @@ const mapDispatchToProps = (dispatch) => ({
   fieldValue: (newValue, inputName) => {
     dispatch(fieldValue(newValue, inputName));
   },
+
+  closeErrorMessage: () => {
+    dispatch(closeErrorMessage());
+  },
+
+  closeSuccesMessage: () => {
+    dispatch(closeSuccesMessage());
+  },
+
 });
 
 export default connect(

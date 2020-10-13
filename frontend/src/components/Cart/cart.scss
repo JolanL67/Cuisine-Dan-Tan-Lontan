@@ -2,22 +2,26 @@
 
 .cart {
   font-family: $fontFamilyText;
-  font-size: $fontSizeTextXl;
+  font-size: $fontSizeTextPhone;
   font-weight: 500;
 
   .cart_content_cart,
   .cart_content_cart_list {
     font-family: $fontFamilyText;
     color: rgb(241, 240, 240);
-    text-shadow: 3px 3px 6px black;
-
-
+    text-shadow: 4px 4px 6px black;
   }
+
   .cart_content_cart_list_item{
     margin-bottom: 0.2em;
     font-family: $fontFamilyText;
     color: rgba(252, 238, 36, 0.932);
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 3px 3px 5px black;
+  }
+
+  .cart_button_delete{
+    background-color: transparent;
+    border: none;
   }
 
   @include phone {
@@ -28,6 +32,7 @@
       justify-content: center;
       flex-direction: column;
     }
+
     .cart_price {
       margin-top: 2em;
       text-align: center;
@@ -43,24 +48,22 @@
       color: rgba(252, 238, 36, 0.932);
       text-shadow: 2px 2px 5px black;
     }
-
  }
- @include sm {
-   
+
+  @include sm {
   }
+
   @include md {
-
-}
-@include xl {
-  margin: 2em auto;
-  width: 100%;
-  .cart_content {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
   }
 
-
-}
+  @include xl {
+    margin: 2em auto;
+    width: 100%;
+    .cart_content {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  }
 
 }

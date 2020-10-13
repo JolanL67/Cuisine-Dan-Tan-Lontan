@@ -87,7 +87,7 @@ const Cart = ({ cart, total, removeItem, cartForData, priceLessDiscount }) => {
                   newCart.push(item.name +' x '+ count);
                   cartForData(newCart);
                   return (
-                    <li className="cart_content_cart_list_item">{item.name} x {count}<button onClick={handleClickRemoveItem} id={item.name} value={item.price}><ClearIcon/></button> </li>
+                    <li className="cart_content_cart_list_item">{item.name} x {count}<button className="cart_button_delete" onClick={handleClickRemoveItem} id={item.name} value={item.price}><ClearIcon/></button> </li>
                   );
                 }
               })}

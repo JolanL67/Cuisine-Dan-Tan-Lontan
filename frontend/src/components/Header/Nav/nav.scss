@@ -2,51 +2,41 @@
 @import "~bootstrap/scss/bootstrap";
 
 
-.navbar{
-    background: linear-gradient(180deg,rgba(0,0,0,.61961),hsl(0deg 10% 71% / 81%) 52%,rgb(0 0 0 / 17%));
-    border-left: 2.5px outset #dcdcdc;
-    border-right: 2.5px outset #dcdcdc;
-    border-bottom: 2.5px outset #dcdcdc;
-    background-color: rgba(244,171,137,.281);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    
-}
-.navbar-nav{
-    text-align: center;
-    width: 100%;
-    margin: 0.3em;
-}
-.navbar-toggler{
-    border: 0.1em solid white!important;
-    background-color: lightcyan;
-}
-.cdtl_navLink{
-    color: white!important;
-    font-family: 'Lobster Two', cursive; 
-    font-size: 1.6em;
-    width: 60%;
-    margin: 0 auto;
-}
-
 .cdtl_navLink:hover{
-    transform: scale(1.2);
+    color: rgb(243, 240, 240)!important;
+    transform: scale(1.1);
 }
 
 @include phone {
+
     .navbar{
-        background: linear-gradient(180deg,rgba(0,0,0,.61961),hsl(0deg 10% 71% / 81%) 52%,rgb(0 0 0 / 50%));
-        border-left: 1.5px outset #dcdcdc;
-        border-right: 1.5px outset #dcdcdc;
-        border-bottom: 1.5px outset #dcdcdc;
-        background-color: rgba(244, 171, 137, 0.418);
+        background-image: url(../../../assets/image/third.jpg);
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 2;
-        line-height: 1.2em;
+        z-index: 3;
+        margin-bottom: 3em;
+        box-shadow: 0 0 15px 1px;
     }
+
+    .brand_navbar{
+        width: 80%;
+        font-family: niconne, cursive;
+        font-size: 2em;
+        font-weight: 500;
+        color: #ff0b0b;
+        text-shadow: 1px 1px 1px #000000,
+         1px 2px 1px #000000,
+         1px 3px 1px #000000,
+         1px 4px 1px #000000,
+         1px 5px 1px #000000,
+         1px 6px 1px #000000,
+         1px 7px 1px #000000,
+         1px 8px 1px #484848,
+         1px 18px 6px rgb(16 16 16),
+         1px 22px 10px rgba(16,16,16,.69), 1px 25px 35px rgba(16,16,16,.66), 1px 30px 60px rgba(16,16,16,.23);
+    }
+
     .navbar-nav{
         text-align: center;
         width: 100%;
@@ -57,7 +47,55 @@
     }
     .cdtl_navLink{
         font-family: Lobster Two,cursive;
-        color: ghostwhite;
+        color: rgb(220, 221, 220)!important;
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363;
+        font-size: 1.6em;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@include sm{
+
+    .navbar{
+        background-image: url(../../../assets/image/third.jpg);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        margin-bottom: 3em;
+        box-shadow: 0 0 15px 1px;
+    }
+
+    .brand_navbar{
+        width: 80%;
+        font-family: niconne, cursive;
+        font-size: 2em;
+        font-weight: 500;
+        color: #ff0b0b;
+        text-shadow: 1px 1px 1px #000000,
+         1px 2px 1px #000000,
+         1px 3px 1px #000000,
+         1px 4px 1px #000000,
+         1px 5px 1px #000000,
+         1px 6px 1px #000000,
+         1px 7px 1px #000000,
+         1px 8px 1px #484848,
+         1px 18px 6px rgb(16 16 16),
+         1px 22px 10px rgba(16,16,16,.69), 1px 25px 35px rgba(16,16,16,.66), 1px 30px 60px rgba(16,16,16,.23);
+    }
+
+    .navbar-nav{
+        text-align: center;
+        width: 100%;
+    }
+    .navbar-toggler{
+        border: 0.1em solid white!important;
+        background-color: lightcyan;
+    }
+    .cdtl_navLink{
+        font-family: Lobster Two,cursive;
+        color: rgb(220, 221, 220)!important;
         text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363;
         font-size: 1.6em;
         width: 80%;
@@ -67,56 +105,66 @@
 
 @include md{
     .navbar{
-        background: linear-gradient(180deg,rgba(0,0,0,.61961),hsl(0deg 10% 71% / 81%) 52%,rgb(0 0 0 / 50%));
-        border-left: 1.5px outset #dcdcdc;
-        border-right: 1.5px outset #dcdcdc;
-        border-bottom: 1.5px outset #dcdcdc;
-        background-color: rgba(244, 171, 137, 0.418);
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 2;
-        line-height: 1.4em;
-    }
-    .navbar-nav{
-        text-align: center;
-        width: 100%;
-    }
-    .navbar-toggler{
-        border: 0.1em solid white!important;
-        background-color: lightcyan;
-    }
-    .cdtl_navLink{
-        font-family: Lobster Two,cursive;
-        color: ghostwhite;
-        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363;
-        font-size: 1.6em;
-        width: 80%;
-        margin: 0 auto;
-        font-weight: 600;
-    }
-}
-
-
-@include xl{
-    .navbar{
         background: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: none;
-        background-color: none;
+        box-shadow: none;
         position: absolute;
         top: 0;
         width: 100%;
         line-height: 1em;
+    }
+
+
+    .brand_navbar{
+        display: none;
     }
   
     .cdtl_navLink{
         font-family: Lobster Two,cursive;
         color: ghostwhite;
         text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363; 
-        font-size: 2.5em;
-        width: 80%;
+        font-size: 1.5em;
+        width: 100%;
+        margin: 1em 0 0 1em;
+    }
+}
+
+@include lg{
+    .navbar{
+        background: none;
+        box-shadow: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        line-height: 1em;
+    }
+
+
+    .brand_navbar{
+        display: none;
+    }
+  
+    .cdtl_navLink{
+        font-family: Lobster Two,cursive;
+        color: ghostwhite;
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363; 
+        font-size: 1.9em;
+        width: 100%;
+        margin: 1em 0 0 2em;
+    }
+}
+
+@include xl{
+
+    .navbar{
+        width: 90%;
+    }
+
+    .cdtl_navLink{
+        font-family: Lobster Two,cursive;
+        color: ghostwhite;
+        text-shadow: 5px 9px 6px #000, 4px 1px 9px #826363; 
+        font-size: 2.2em;
+        width: 100%;
         margin: 1em 0 0 2em;
     }
 }

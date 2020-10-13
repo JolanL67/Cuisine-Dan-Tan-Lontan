@@ -1,11 +1,8 @@
 import axios from 'axios';
-import { PUSH_DATA } from '../action/push';
+import { cleanData, errorMessage, PUSH_DATA, succesMessage } from '../action/push';
 
 const pushMiddleware = (store) => (next) => (action) => {
 
-  function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
-  }
   // console.log('on a intercepté une action dans le middleware: ', action);
   switch (action.type) {
     case PUSH_DATA: {
@@ -13,7 +10,7 @@ const pushMiddleware = (store) => (next) => (action) => {
       const { shortCart, total } = store.getState().menu;
       axios({
         method: 'post',
-        url: 'https://api.cuisinelontan974.fr/api/v1/sendsms',
+        url: 'https://api.cuisinelontan974.fr/api/v1/sendsm',
         data: {
           shortCart,
           name,
@@ -27,10 +24,11 @@ const pushMiddleware = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response);
-          // je voudrais enregistrer response.data dans le state => nouvelle action
-          // console.log(response);
+          store.dispatch(succesMessage());
+          store.dispatch(cleanData());
         })
         .catch((error) => {
+          store.dispatch(errorMessage());
           console.warn(error);
           console.log(error.data);
         });

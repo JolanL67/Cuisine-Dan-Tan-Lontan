@@ -7,7 +7,8 @@ import './nav.scss';
 
 const Navigation = () => {
   return (
-    <Navbar expand="lg">
+    <Navbar expand="md">
+      <div className="brand_navbar">Cuisine DTL</div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto cdtlNav">

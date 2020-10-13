@@ -69,7 +69,7 @@ const Menus = ({
             }
             if (found === undefined) {
               return (
-                <div className="container">
+                <div className="container_card">
                   <div className="front">
                     <div className="inner">
                       <p>{plat.name}</p>
@@ -88,7 +88,7 @@ const Menus = ({
               );
             }
             return (
-              <div className="container">
+              <div className="container_card">
                 <div className="front">
                   <div className="inner">
                     <p>{plat.name}</p>

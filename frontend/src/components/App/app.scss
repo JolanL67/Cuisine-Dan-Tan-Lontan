@@ -1,23 +1,6 @@
 @import 'src/styles/vars';
+
 body {
 	background-image: url(../../assets/image/second.jpg);
 	background-attachment: fixed;
 }
-
-@include phone {
-	
-	.cdtl_app{
-		background-color: #fafbc32e;
-		background-attachment: fixed;
-		background-size: cover;
-		}
-}
-
-@include md{
-
-}
-
-@include xl{
-    
-}
-
